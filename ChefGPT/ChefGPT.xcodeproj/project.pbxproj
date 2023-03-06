@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		855C88E629B68EA40010A209 /* ChefGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C88E529B68EA40010A209 /* ChefGPTApp.swift */; };
+		855C88E829B68EA40010A209 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C88E729B68EA40010A209 /* ContentView.swift */; };
+		855C88EA29B68EA50010A209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855C88E929B68EA50010A209 /* Assets.xcassets */; };
+		855C88ED29B68EA50010A209 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855C88EC29B68EA50010A209 /* Preview Assets.xcassets */; };
+		855C88F729B68EA50010A209 /* ChefGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C88F629B68EA50010A209 /* ChefGPTTests.swift */; };
+		855C890129B68EA50010A209 /* ChefGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890029B68EA50010A209 /* ChefGPTUITests.swift */; };
+		855C890329B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		855C88F329B68EA50010A209 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 855C88DA29B68EA40010A209 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 855C88E129B68EA40010A209;
+			remoteInfo = ChefGPT;
+		};
+		855C88FD29B68EA50010A209 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 855C88DA29B68EA40010A209 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 855C88E129B68EA40010A209;
+			remoteInfo = ChefGPT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		855C88E229B68EA40010A209 /* ChefGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		855C88E529B68EA40010A209 /* ChefGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTApp.swift; sourceTree = "<group>"; };
+		855C88E729B68EA40010A209 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		855C88E929B68EA50010A209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		855C88EC29B68EA50010A209 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		855C88F229B68EA50010A209 /* ChefGPTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefGPTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		855C88F629B68EA50010A209 /* ChefGPTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTTests.swift; sourceTree = "<group>"; };
+		855C88FC29B68EA50010A209 /* ChefGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		855C890029B68EA50010A209 /* ChefGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITests.swift; sourceTree = "<group>"; };
+		855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		855C88DF29B68EA40010A209 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		855C88EF29B68EA50010A209 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		855C88F929B68EA50010A209 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		855C88D929B68EA40010A209 = {
+			isa = PBXGroup;
+			children = (
+				855C88E429B68EA40010A209 /* ChefGPT */,
+				855C88F529B68EA50010A209 /* ChefGPTTests */,
+				855C88FF29B68EA50010A209 /* ChefGPTUITests */,
+				855C88E329B68EA40010A209 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		855C88E329B68EA40010A209 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				855C88E229B68EA40010A209 /* ChefGPT.app */,
+				855C88F229B68EA50010A209 /* ChefGPTTests.xctest */,
+				855C88FC29B68EA50010A209 /* ChefGPTUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		855C88E429B68EA40010A209 /* ChefGPT */ = {
+			isa = PBXGroup;
+			children = (
+				855C88E529B68EA40010A209 /* ChefGPTApp.swift */,
+				855C88E729B68EA40010A209 /* ContentView.swift */,
+				855C88E929B68EA50010A209 /* Assets.xcassets */,
+				855C88EB29B68EA50010A209 /* Preview Content */,
+			);
+			path = ChefGPT;
+			sourceTree = "<group>";
+		};
+		855C88EB29B68EA50010A209 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				855C88EC29B68EA50010A209 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		855C88F529B68EA50010A209 /* ChefGPTTests */ = {
+			isa = PBXGroup;
+			children = (
+				855C88F629B68EA50010A209 /* ChefGPTTests.swift */,
+			);
+			path = ChefGPTTests;
+			sourceTree = "<group>";
+		};
+		855C88FF29B68EA50010A209 /* ChefGPTUITests */ = {
+			isa = PBXGroup;
+			children = (
+				855C890029B68EA50010A209 /* ChefGPTUITests.swift */,
+				855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */,
+			);
+			path = ChefGPTUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		855C88E129B68EA40010A209 /* ChefGPT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 855C890629B68EA50010A209 /* Build configuration list for PBXNativeTarget "ChefGPT" */;
+			buildPhases = (
+				855C88DE29B68EA40010A209 /* Sources */,
+				855C88DF29B68EA40010A209 /* Frameworks */,
+				855C88E029B68EA40010A209 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChefGPT;
+			productName = ChefGPT;
+			productReference = 855C88E229B68EA40010A209 /* ChefGPT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		855C88F129B68EA50010A209 /* ChefGPTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 855C890929B68EA50010A209 /* Build configuration list for PBXNativeTarget "ChefGPTTests" */;
+			buildPhases = (
+				855C88EE29B68EA50010A209 /* Sources */,
+				855C88EF29B68EA50010A209 /* Frameworks */,
+				855C88F029B68EA50010A209 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				855C88F429B68EA50010A209 /* PBXTargetDependency */,
+			);
+			name = ChefGPTTests;
+			productName = ChefGPTTests;
+			productReference = 855C88F229B68EA50010A209 /* ChefGPTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		855C88FB29B68EA50010A209 /* ChefGPTUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 855C890C29B68EA50010A209 /* Build configuration list for PBXNativeTarget "ChefGPTUITests" */;
+			buildPhases = (
+				855C88F829B68EA50010A209 /* Sources */,
+				855C88F929B68EA50010A209 /* Frameworks */,
+				855C88FA29B68EA50010A209 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				855C88FE29B68EA50010A209 /* PBXTargetDependency */,
+			);
+			name = ChefGPTUITests;
+			productName = ChefGPTUITests;
+			productReference = 855C88FC29B68EA50010A209 /* ChefGPTUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		855C88DA29B68EA40010A209 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					855C88E129B68EA40010A209 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					855C88F129B68EA50010A209 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 855C88E129B68EA40010A209;
+					};
+					855C88FB29B68EA50010A209 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 855C88E129B68EA40010A209;
+					};
+				};
+			};
+			buildConfigurationList = 855C88DD29B68EA40010A209 /* Build configuration list for PBXProject "ChefGPT" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 855C88D929B68EA40010A209;
+			productRefGroup = 855C88E329B68EA40010A209 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				855C88E129B68EA40010A209 /* ChefGPT */,
+				855C88F129B68EA50010A209 /* ChefGPTTests */,
+				855C88FB29B68EA50010A209 /* ChefGPTUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		855C88E029B68EA40010A209 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855C88ED29B68EA50010A209 /* Preview Assets.xcassets in Resources */,
+				855C88EA29B68EA50010A209 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		855C88F029B68EA50010A209 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		855C88FA29B68EA50010A209 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		855C88DE29B68EA40010A209 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855C88E829B68EA40010A209 /* ContentView.swift in Sources */,
+				855C88E629B68EA40010A209 /* ChefGPTApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		855C88EE29B68EA50010A209 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855C88F729B68EA50010A209 /* ChefGPTTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		855C88F829B68EA50010A209 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855C890329B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift in Sources */,
+				855C890129B68EA50010A209 /* ChefGPTUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		855C88F429B68EA50010A209 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 855C88E129B68EA40010A209 /* ChefGPT */;
+			targetProxy = 855C88F329B68EA50010A209 /* PBXContainerItemProxy */;
+		};
+		855C88FE29B68EA50010A209 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 855C88E129B68EA40010A209 /* ChefGPT */;
+			targetProxy = 855C88FD29B68EA50010A209 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		855C890429B68EA50010A209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		855C890529B68EA50010A209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		855C890729B68EA50010A209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChefGPT/Preview Content\"";
+				DEVELOPMENT_TEAM = 9UBGR8SHZN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AjayMoturi.ChefGPT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		855C890829B68EA50010A209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ChefGPT/Preview Content\"";
+				DEVELOPMENT_TEAM = 9UBGR8SHZN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AjayMoturi.ChefGPT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		855C890A29B68EA50010A209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9UBGR8SHZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AjayMoturi.ChefGPTTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChefGPT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChefGPT";
+			};
+			name = Debug;
+		};
+		855C890B29B68EA50010A209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9UBGR8SHZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AjayMoturi.ChefGPTTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChefGPT.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChefGPT";
+			};
+			name = Release;
+		};
+		855C890D29B68EA50010A209 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9UBGR8SHZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AjayMoturi.ChefGPTUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChefGPT;
+			};
+			name = Debug;
+		};
+		855C890E29B68EA50010A209 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9UBGR8SHZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AjayMoturi.ChefGPTUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ChefGPT;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		855C88DD29B68EA40010A209 /* Build configuration list for PBXProject "ChefGPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855C890429B68EA50010A209 /* Debug */,
+				855C890529B68EA50010A209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		855C890629B68EA50010A209 /* Build configuration list for PBXNativeTarget "ChefGPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855C890729B68EA50010A209 /* Debug */,
+				855C890829B68EA50010A209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		855C890929B68EA50010A209 /* Build configuration list for PBXNativeTarget "ChefGPTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855C890A29B68EA50010A209 /* Debug */,
+				855C890B29B68EA50010A209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		855C890C29B68EA50010A209 /* Build configuration list for PBXNativeTarget "ChefGPTUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				855C890D29B68EA50010A209 /* Debug */,
+				855C890E29B68EA50010A209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 855C88DA29B68EA40010A209 /* Project object */;
+}
