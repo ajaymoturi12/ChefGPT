@@ -18,6 +18,8 @@
 		9B2854F329BF75C4005DE35B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2854F229BF75C4005DE35B /* HomeView.swift */; };
 		9B2854F529BF75C8005DE35B /* PantryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2854F429BF75C8005DE35B /* PantryView.swift */; };
 		9B2854F729BF75D1005DE35B /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2854F629BF75D1005DE35B /* ExploreView.swift */; };
+		9B4630B629BFE26100DCAB5A /* RecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */; };
+		9B4630B829BFE2A200DCAB5A /* SpoonacularRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		9B2854F229BF75C4005DE35B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9B2854F429BF75C8005DE35B /* PantryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryView.swift; sourceTree = "<group>"; };
 		9B2854F629BF75D1005DE35B /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfo.swift; sourceTree = "<group>"; };
+		9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +108,9 @@
 			children = (
 				855C88E529B68EA40010A209 /* ChefGPTApp.swift */,
 				855C88E729B68EA40010A209 /* ContentView.swift */,
+				9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */,
 				9B2854F029BF7593005DE35B /* MainView.swift */,
+				9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */,
 				9B2854F229BF75C4005DE35B /* HomeView.swift */,
 				9B2854F429BF75C8005DE35B /* PantryView.swift */,
 				9B2854F629BF75D1005DE35B /* ExploreView.swift */,
@@ -269,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4630B629BFE26100DCAB5A /* RecipeInfo.swift in Sources */,
 				855C88E829B68EA40010A209 /* ContentView.swift in Sources */,
 				9B2854F329BF75C4005DE35B /* HomeView.swift in Sources */,
+				9B4630B829BFE2A200DCAB5A /* SpoonacularRequest.swift in Sources */,
 				855C88E629B68EA40010A209 /* ChefGPTApp.swift in Sources */,
 				9B2854F129BF7593005DE35B /* MainView.swift in Sources */,
 				9B2854F729BF75D1005DE35B /* ExploreView.swift in Sources */,

@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        let req = SpoonacularReq()
+        let _ = req.get_recipes(ingredient_list: "chocolate cake")
         MainView()
+    }
+    
+    func call() {
+        
     }
 }
 
