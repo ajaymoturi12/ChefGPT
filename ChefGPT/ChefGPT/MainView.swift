@@ -16,11 +16,11 @@ struct MainView: View {
                 }
             PantryView()
                 .tabItem {
-                    Label("Home", systemImage: "square")
+                    Label("Pantry", systemImage: "square")
                 }
             ExploreView()
                 .tabItem {
-                    Label("Home", systemImage: "square")
+                    Label("Explore", systemImage: "square")
                 }
         }
     }
