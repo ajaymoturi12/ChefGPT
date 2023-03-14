@@ -21,6 +21,35 @@ struct RecipeInfo: Identifiable, Codable {
     var imageType: String
 }
 
-//struct Recipe: Identifiable, Codable {
-//
-//}
+struct Recipe: Codable {
+    var vegetarian: Bool
+    var vegan: Bool
+    var glutenFree: Bool
+    var dairyFree: Bool
+    var preparationMinutes: Int
+    var cookingMinutes: Int
+    var analyzedInstructions: [Instructions]
+    var extendedIngredients: [ExtendedIngredients]
+}
+
+struct Instructions: Codable {
+    var name: String
+    var steps: [Steps]
+}
+
+struct Steps: Codable{
+    var number: Int
+    var step: String
+    var ingredients : [Ingredients]
+}
+
+struct Ingredients: Codable {
+    var name: String
+    var image: String  // String for now
+}
+
+struct ExtendedIngredients: Codable {
+    var name: String
+    var amount: Double
+    var unit: String
+}
