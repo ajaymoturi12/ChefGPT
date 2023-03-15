@@ -20,6 +20,7 @@
 		9B2854F729BF75D1005DE35B /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2854F629BF75D1005DE35B /* ExploreView.swift */; };
 		9B4630B629BFE26100DCAB5A /* RecipeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */; };
 		9B4630B829BFE2A200DCAB5A /* SpoonacularRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */; };
+		9B97376629C23281007D373A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B97376529C23281007D373A /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		9B2854F629BF75D1005DE35B /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInfo.swift; sourceTree = "<group>"; };
 		9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularRequest.swift; sourceTree = "<group>"; };
+		9B97376529C23281007D373A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,13 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				855C88E529B68EA40010A209 /* ChefGPTApp.swift */,
-				855C88E729B68EA40010A209 /* ContentView.swift */,
-				9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */,
-				9B2854F029BF7593005DE35B /* MainView.swift */,
-				9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */,
-				9B2854F229BF75C4005DE35B /* HomeView.swift */,
-				9B2854F429BF75C8005DE35B /* PantryView.swift */,
-				9B2854F629BF75D1005DE35B /* ExploreView.swift */,
+				9B97376A29C237FC007D373A /* Backend */,
+				9B97376929C237F0007D373A /* Views */,
 				855C88E929B68EA50010A209 /* Assets.xcassets */,
 				855C88EB29B68EA50010A209 /* Preview Content */,
 			);
@@ -143,6 +140,28 @@
 				855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */,
 			);
 			path = ChefGPTUITests;
+			sourceTree = "<group>";
+		};
+		9B97376929C237F0007D373A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				855C88E729B68EA40010A209 /* ContentView.swift */,
+				9B97376529C23281007D373A /* ImagePicker.swift */,
+				9B2854F029BF7593005DE35B /* MainView.swift */,
+				9B2854F229BF75C4005DE35B /* HomeView.swift */,
+				9B2854F429BF75C8005DE35B /* PantryView.swift */,
+				9B2854F629BF75D1005DE35B /* ExploreView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B97376A29C237FC007D373A /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */,
+				9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */,
+			);
+			path = Backend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +296,7 @@
 			files = (
 				9B4630B629BFE26100DCAB5A /* RecipeInfo.swift in Sources */,
 				855C88E829B68EA40010A209 /* ContentView.swift in Sources */,
+				9B97376629C23281007D373A /* ImagePicker.swift in Sources */,
 				9B2854F329BF75C4005DE35B /* HomeView.swift in Sources */,
 				9B4630B829BFE2A200DCAB5A /* SpoonacularRequest.swift in Sources */,
 				855C88E629B68EA40010A209 /* ChefGPTApp.swift in Sources */,
@@ -441,9 +461,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChefGPT/Preview Content\"";
-				DEVELOPMENT_TEAM = 9UBGR8SHZN;
+				DEVELOPMENT_TEAM = YGMU4NNJHX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please enable camera usage to allow taking photos of food.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -470,9 +491,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChefGPT/Preview Content\"";
-				DEVELOPMENT_TEAM = 9UBGR8SHZN;
+				DEVELOPMENT_TEAM = YGMU4NNJHX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please enable camera usage to allow taking photos of food.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
