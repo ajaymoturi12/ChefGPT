@@ -14,7 +14,8 @@
 		855C88F729B68EA50010A209 /* ChefGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C88F629B68EA50010A209 /* ChefGPTTests.swift */; };
 		855C890129B68EA50010A209 /* ChefGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890029B68EA50010A209 /* ChefGPTUITests.swift */; };
 		855C890329B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */; };
-		85EEEE4129C28566007252F9 /* IngredientClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 85EEEE4029C28566007252F9 /* IngredientClassifier.mlmodel */; };
+		9B0542D029C292F000D18E3B /* IngredientClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 9B0542CF29C292F000D18E3B /* IngredientClassifier.mlmodel */; };
+		9B0542D229C293B400D18E3B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0542D129C293B400D18E3B /* UserData.swift */; };
 		9B2854F129BF7593005DE35B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2854F029BF7593005DE35B /* MainView.swift */; };
 		9B2854F329BF75C4005DE35B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2854F229BF75C4005DE35B /* HomeView.swift */; };
 		9B2854F529BF75C8005DE35B /* PantryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2854F429BF75C8005DE35B /* PantryView.swift */; };
@@ -52,7 +53,8 @@
 		855C88FC29B68EA50010A209 /* ChefGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		855C890029B68EA50010A209 /* ChefGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITests.swift; sourceTree = "<group>"; };
 		855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		85EEEE4029C28566007252F9 /* IngredientClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = IngredientClassifier.mlmodel; path = ../../../../secure/IngredientClassifier.mlmodel; sourceTree = "<group>"; };
+		9B0542CF29C292F000D18E3B /* IngredientClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = IngredientClassifier.mlmodel; sourceTree = "<group>"; };
+		9B0542D129C293B400D18E3B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		9B2854F029BF7593005DE35B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9B2854F229BF75C4005DE35B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9B2854F429BF75C8005DE35B /* PantryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantryView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				855C88E529B68EA40010A209 /* ChefGPTApp.swift */,
+				9B0542D129C293B400D18E3B /* UserData.swift */,
 				9B97376A29C237FC007D373A /* Backend */,
 				9B97376929C237F0007D373A /* Views */,
 				855C88E929B68EA50010A209 /* Assets.xcassets */,
@@ -160,7 +163,7 @@
 		9B97376A29C237FC007D373A /* Backend */ = {
 			isa = PBXGroup;
 			children = (
-				85EEEE4029C28566007252F9 /* IngredientClassifier.mlmodel */,
+				9B0542CF29C292F000D18E3B /* IngredientClassifier.mlmodel */,
 				9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */,
 				9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */,
 			);
@@ -301,7 +304,8 @@
 				855C88E829B68EA40010A209 /* ContentView.swift in Sources */,
 				9B97376629C23281007D373A /* ImagePicker.swift in Sources */,
 				9B2854F329BF75C4005DE35B /* HomeView.swift in Sources */,
-				85EEEE4129C28566007252F9 /* IngredientClassifier.mlmodel in Sources */,
+				9B0542D029C292F000D18E3B /* IngredientClassifier.mlmodel in Sources */,
+				9B0542D229C293B400D18E3B /* UserData.swift in Sources */,
 				9B4630B829BFE2A200DCAB5A /* SpoonacularRequest.swift in Sources */,
 				855C88E629B68EA40010A209 /* ChefGPTApp.swift in Sources */,
 				9B2854F129BF7593005DE35B /* MainView.swift in Sources */,

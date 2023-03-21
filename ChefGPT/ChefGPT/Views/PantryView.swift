@@ -12,6 +12,8 @@ struct PantryView: View {
     @State private var showingImagePicker = false
     @State private var inputImages:[UIImage] = [UIImage]()
     
+    @EnvironmentObject private var model: UserData
+    
     var body: some View {
         ZStack {
             // Content should be here

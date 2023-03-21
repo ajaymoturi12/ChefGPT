@@ -30,6 +30,12 @@ struct Recipe: Codable {
     var cookingMinutes: Int
     var analyzedInstructions: [Instructions]
     var extendedIngredients: [ExtendedIngredients]
+    
+    static let exampleData = [
+        Recipe(vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 4, cookingMinutes: 5, analyzedInstructions: [], extendedIngredients: ExtendedIngredients.exampleData),
+        Recipe(vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 4, cookingMinutes: 5, analyzedInstructions: [], extendedIngredients: ExtendedIngredients.exampleData),
+        Recipe(vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 4, cookingMinutes: 5, analyzedInstructions: [], extendedIngredients: ExtendedIngredients.exampleData),
+    ]
 }
 
 struct Instructions: Codable {
@@ -52,4 +58,10 @@ struct ExtendedIngredients: Codable {
     var name: String
     var amount: Double
     var unit: String
+    
+    static let exampleData = [
+    ExtendedIngredients(name: "Apple", amount: 2, unit: "each"),
+    ExtendedIngredients(name: "Flour", amount: 2, unit: "cups"),
+    ExtendedIngredients(name: "Peanut Butter", amount: 2, unit: "cups")
+    ]
 }
