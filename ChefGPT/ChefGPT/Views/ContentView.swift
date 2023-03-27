@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        let req = SpoonacularReq()
-        let _ = req.get_recipe_info(id: 663261)
         MainView()
     }
 }

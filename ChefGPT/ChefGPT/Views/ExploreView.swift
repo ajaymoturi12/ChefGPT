@@ -10,6 +10,16 @@ import SwiftUI
 struct ExploreView: View {
     var body: some View {
         Color.green
+            .task {
+                do {
+                    let recipes = try await SpoonacularReq().getRecipesGivenIngredients(ingredients: "", count: 2)
+                    
+                    print(recipes.first!)
+                } catch {
+                    print("error", error)
+                }
+                
+            }
     }
 }
 
