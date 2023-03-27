@@ -12,6 +12,7 @@ struct RecipeCardView: View {
     
     var body: some View {
         ZStack {
+            
             VStack {
                 
                 AsyncImage(url: URL(string: recipe.foodImage)) { image in
