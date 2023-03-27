@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @EnvironmentObject var model:Model
+    
     var body: some View {
-        Color.red
+        ScrollView {
+            VStack {
+                ForEach(model.usersRecipes, id:\.id) { recipe in
+                    RecipeCardView(recipe: recipe)
+                }
+            }
+        }
     }
 }
 

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ExploreView: View {
+    
+    @EnvironmentObject var model: Model
+    
     var body: some View {
         Color.green
             .task {

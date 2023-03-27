@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @StateObject var model = Model()
+    
     var body: some View {
         TabView {
             HomeView()
@@ -23,6 +26,7 @@ struct MainView: View {
                     Label("Explore", systemImage: "square")
                 }
         }
+        .environmentObject(model)
     }
 }
 

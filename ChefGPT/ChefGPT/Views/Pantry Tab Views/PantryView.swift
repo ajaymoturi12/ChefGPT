@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PantryView: View {
     
+    @EnvironmentObject var recipes: Model
+    
     @State private var showingImagePicker = false
     @State private var inputImages:[UIImage] = [UIImage]()
     

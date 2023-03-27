@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct RecipesCardView: View {
-    let recipes = SavedRecipe.sampleIndividualData
-
-
+struct RecipeCardView: View {
+    let recipe:SavedRecipe
+    
     var body: some View {
         ZStack {
             VStack {
                 
-                AsyncImage(url: URL(string: recipes.foodImage)) { image in
+                AsyncImage(url: URL(string: recipe.foodImage)) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -27,17 +26,17 @@ struct RecipesCardView: View {
                         .frame(height: 150)
                 }
                 
-                Image(recipes.foodImage)
+                Image(recipe.foodImage)
                     
                 HStack {
                     
                     VStack {
-                        Text(recipes.name)
+                        Text(recipe.name)
                             .bold()
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding([.leading,.bottom])
                         
-                        Text("Cooking Time : \(recipes.time) minutes")
+                        Text("Cooking Time : \(recipe.time) minutes")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding([.leading,.bottom])
                             .foregroundColor(.secondary)
@@ -67,7 +66,7 @@ struct RecipesCardView: View {
 
 struct RecipesCardView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipesCardView()
+        RecipeCardView(recipe: SavedRecipe.sampleIndividualData)
             .previewLayout(.sizeThatFits)
     }
 }

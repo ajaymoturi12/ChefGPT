@@ -117,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				855C88E529B68EA40010A209 /* ChefGPTApp.swift */,
-				9B01998C29D1DC6B002767EA /* SavedRecipe.swift */,
 				9B97376A29C237FC007D373A /* Backend */,
 				9B97376929C237F0007D373A /* Views */,
 				855C88E929B68EA50010A209 /* Assets.xcassets */,
@@ -155,12 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				855C88E729B68EA40010A209 /* ContentView.swift */,
-				9B97376529C23281007D373A /* ImagePicker.swift */,
 				9B2854F029BF7593005DE35B /* MainView.swift */,
-				9B2854F229BF75C4005DE35B /* HomeView.swift */,
-				9B01998829D1D93F002767EA /* RecipeCardView.swift */,
-				9B2854F429BF75C8005DE35B /* PantryView.swift */,
-				9B2854F629BF75D1005DE35B /* ExploreView.swift */,
+				9BC0D85329D2339E00EDEADB /* Home Tab Views */,
+				9BC0D85229D2337400EDEADB /* Pantry Tab Views */,
+				9BC0D85529D233BB00EDEADB /* Explore Tab Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,8 +169,35 @@
 				9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */,
 				9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */,
 				9B01998A29D1DB68002767EA /* Model.swift */,
+				9B01998C29D1DC6B002767EA /* SavedRecipe.swift */,
 			);
 			path = Backend;
+			sourceTree = "<group>";
+		};
+		9BC0D85229D2337400EDEADB /* Pantry Tab Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B2854F429BF75C8005DE35B /* PantryView.swift */,
+				9B97376529C23281007D373A /* ImagePicker.swift */,
+			);
+			path = "Pantry Tab Views";
+			sourceTree = "<group>";
+		};
+		9BC0D85329D2339E00EDEADB /* Home Tab Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B2854F229BF75C4005DE35B /* HomeView.swift */,
+				9B01998829D1D93F002767EA /* RecipeCardView.swift */,
+			);
+			path = "Home Tab Views";
+			sourceTree = "<group>";
+		};
+		9BC0D85529D233BB00EDEADB /* Explore Tab Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B2854F629BF75D1005DE35B /* ExploreView.swift */,
+			);
+			path = "Explore Tab Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

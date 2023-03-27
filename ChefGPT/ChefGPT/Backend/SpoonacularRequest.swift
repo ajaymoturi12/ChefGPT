@@ -120,7 +120,7 @@ class SpoonacularReq: ObservableObject {
             let secondDecodedData = try JSONDecoder().decode(Recipe.self, from: data)
             
             
-            let fullRecipe = SavedRecipe(name: recipe.title, foodImage: recipe.image, time: secondDecodedData.cookingMinutes + secondDecodedData.preparationMinutes, vegetarian: secondDecodedData.vegetarian, vegan: secondDecodedData.vegan, glutenFree: secondDecodedData.glutenFree, dairyFree: secondDecodedData.dairyFree, preparationMinutes: secondDecodedData.preparationMinutes, cookingMinutes: secondDecodedData.cookingMinutes, ingredients: secondDecodedData.extendedIngredients, instructions: secondDecodedData.analyzedInstructions)
+            let fullRecipe = SavedRecipe(id: id, name: recipe.title, foodImage: recipe.image, time: secondDecodedData.cookingMinutes + secondDecodedData.preparationMinutes, vegetarian: secondDecodedData.vegetarian, vegan: secondDecodedData.vegan, glutenFree: secondDecodedData.glutenFree, dairyFree: secondDecodedData.dairyFree, preparationMinutes: secondDecodedData.preparationMinutes, cookingMinutes: secondDecodedData.cookingMinutes, ingredients: secondDecodedData.extendedIngredients, instructions: secondDecodedData.analyzedInstructions)
             
             recipes.append(fullRecipe)
         }
