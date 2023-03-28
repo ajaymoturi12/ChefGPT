@@ -15,10 +15,7 @@ struct PantryView: View {
     
     var body: some View {
         ZStack {
-            // Content should be here
-            
-            
-            VStack(spacing: -20) {
+            VStack {
                 Text("Welcome to your \n Pantry")
                     .font(.system(size: 35))
                     .fontWeight(.bold)
@@ -41,21 +38,28 @@ struct PantryView: View {
                 ScrollView {
                     VStack {
                         ForEach(model.usersPantry, id:\.name) { ingredient in
-                            Text("hey")
+                            IndividualIngredientView(ingredient: ingredient)
                         }
                     }
                 }
+                .padding()
                 
-                Text("Out of Stock")
-                    .font(.system(size:30))
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal)
-                    .padding(.vertical, 40)
+//                Text("Out of Stock")
+//                    .font(.system(size:30))
+//                    .fontWeight(.bold)
+//                    .frame(maxWidth: .infinity, alignment: .leading)
+//                    .padding(.horizontal)
+//                    .padding(.vertical, 40)
+            }
+
+            //Button Stuff
+            VStack {
                 Spacer()
                 HStack {
+                    Spacer()
+                    // This is the button that someone presses to add new ingredients 
                     Button {
-                        model.usersPantry.append(ExtendedIngredients(name: "New Item", amount: 0, unit: "oz"))
+                        showingImagePicker = true
                     } label: {
                         Image(systemName: "plus.circle.fill")
                             .resizable()
@@ -64,36 +68,16 @@ struct PantryView: View {
                             .padding()
                     }
                 }
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .padding()
-                Spacer()
-                
-                
-                
-                
-                // Button on top part
-//                VStack {
-//                    Spacer()
-//                    HStack {
-//                        Spacer()
-//                        Circle()
-//                            .frame(width: 75)
-//                            .foregroundColor(.blue)
-//                            .onTapGesture {
-//                                showingImagePicker = true
-//                            }
-//                    }
-//                }
-//                .padding()
             }
-            .sheet(isPresented: $showingImagePicker) {
-                ImagePicker(images: $inputImages)
-            }
+        }
+        .sheet(isPresented: $showingImagePicker) {
+            ImagePicker(images: $inputImages)
         }
     }
 }
 struct PantryView_Previews: PreviewProvider {
     static var previews: some View {
         PantryView()
+            .environmentObject(Model())
     }
 }

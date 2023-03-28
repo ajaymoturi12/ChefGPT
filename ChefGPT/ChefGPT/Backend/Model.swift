@@ -10,7 +10,7 @@ import Foundation
 class Model: ObservableObject {
     
     @Published var usersRecipes = SavedRecipe.sampleData // currently just fake data
-    @Published var usersPantry = [ExtendedIngredients]()
+    @Published var usersPantry = ExtendedIngredients.exampleData
     
     
     public static var fakeRecipes = SavedRecipe.sampleData
