@@ -7,12 +7,35 @@
 
 import Foundation
 
-struct SavedRecipe {
+class SavedRecipe: ObservableObject {
+    
+    
+    internal init(id: Int, name: String, foodImage: String, time: Int, isFavorited: Bool = false, vegetarian: Bool, vegan: Bool, glutenFree: Bool, dairyFree: Bool, preparationMinutes: Int, cookingMinutes: Int, ingredients: [ExtendedIngredients], instructions: [Instructions]) {
+        self.id = id
+        self.name = name
+        self.foodImage = foodImage
+        self.time = time
+        self.isFavorited = isFavorited
+        self.vegetarian = vegetarian
+        self.vegan = vegan
+        self.glutenFree = glutenFree
+        self.dairyFree = dairyFree
+        self.preparationMinutes = preparationMinutes
+        self.cookingMinutes = cookingMinutes
+        self.ingredients = ingredients
+        self.instructions = instructions
+    }
+    
+    
+    
+
     
     let id: Int
     let name: String
     let foodImage: String
     let time: Int
+    
+    var isFavorited = false
     
     var vegetarian: Bool
     var vegan: Bool
@@ -56,4 +79,11 @@ struct SavedRecipe {
     Instructions(name: "Construct Sandwich", steps: [
     Steps(number: 1, step: "Get Bread", ingredients: [ Ingredients(name: "Bread", image: "image name")])])
     ]
+    
+    
+    func toggleFavorited() {
+        print("Bruh")
+        isFavorited.toggle()
+    }
+
 }

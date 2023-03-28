@@ -15,7 +15,8 @@ struct HomeView: View {
         ScrollView {
             VStack {
                 ForEach(model.usersRecipes, id:\.id) { recipe in
-                    RecipeCardView(recipe: recipe)
+                    RecipeCardView()
+                        .environmentObject(recipe)
                 }
             }
         }

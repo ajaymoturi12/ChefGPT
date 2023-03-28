@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RecipeCardView: View {
-    let recipe:SavedRecipe
+    
+    @EnvironmentObject var recipe: SavedRecipe
     
     var body: some View {
         ZStack {
@@ -42,7 +43,7 @@ struct RecipeCardView: View {
                     }
                     
                     Button{
-                        
+                        recipe.toggleFavorited()
                     } label: {
                         Image(systemName: "bookmark")
                             .foregroundColor(.black)
@@ -65,7 +66,8 @@ struct RecipeCardView: View {
 
 struct RecipesCardView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeCardView(recipe: SavedRecipe.sampleIndividualData)
-            .previewLayout(.sizeThatFits)
+        RecipeCardView()
+//            .previewLayout(.sizeThatFits)
+            .environmentObject(Model().usersRecipes.first!)
     }
 }
