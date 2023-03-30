@@ -14,7 +14,7 @@ struct IndividualIngredientView: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(.lightGrey())
+                .foregroundColor(.GPTlightGrey())
             HStack() {
                 HStack {
                     Image(systemName: "leaf.circle")
