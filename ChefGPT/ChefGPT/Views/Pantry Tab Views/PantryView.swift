@@ -70,8 +70,8 @@ struct PantryView: View {
                 }
             }
         }
-        .sheet(isPresented: $showingImagePicker) {
-            ImagePicker(images: $inputImages)
+        .fullScreenCover(isPresented: $showingImagePicker) {
+            CameraView()
         }
     }
 }

@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct CameraFoodConfirmationView: View {
+    
+    let image:UIImage
+    
+    @EnvironmentObject var model: Model
     var body: some View {
         Text("Hello, World!")
     }
@@ -15,7 +19,7 @@ struct CameraFoodConfirmationView: View {
 
 struct CameraFoodConfirmationView_Previews: PreviewProvider {
     static var previews: some View {
-        CameraFoodConfirmationView()
+        CameraFoodConfirmationView(image: UIImage())
     }
     
 }

@@ -15,7 +15,6 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     @Published var alert = false
     @Published var output = AVCapturePhotoOutput()
     
-    
     // preview...
     @Published var preview: AVCaptureVideoPreviewLayer!
     
@@ -71,7 +70,7 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
     func takePhoto() {
         DispatchQueue.global(qos: .background).async {
             self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
-//            self.session.stopRunning()
+            self.session.stopRunning()
             
             DispatchQueue.main.async {
                 
@@ -102,5 +101,21 @@ class CameraModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate {
         self.pictureData = imageData
         
         
+    }
+    
+    func takePic(){
+        DispatchQueue.global(qos: .background).async {
+            self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+            DispatchQueue.main.async {
+                Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { (timer) in
+                    self.session.stopRunning()
+                }
+            }
+            
+            DispatchQueue.main.async {
+                withAnimation{self.isTaken.toggle()}
+            }
+            print("pic taken...")
+        }
     }
 }

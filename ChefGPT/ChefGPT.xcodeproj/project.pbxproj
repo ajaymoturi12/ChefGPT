@@ -135,10 +135,6 @@
 				9B97376929C237F0007D373A /* Views */,
 				855C88E929B68EA50010A209 /* Assets.xcassets */,
 				855C88EB29B68EA50010A209 /* Preview Content */,
-				9B6F39B429D9E3F9006820BB /* CameraView.swift */,
-				9B6F39B629D9E3FF006820BB /* CameraPreview.swift */,
-				9B6F39B829D9E40D006820BB /* CameraModel.swift */,
-				9B6F39BA29D9EB94006820BB /* CameraFoodConfirmationView.swift */,
 			);
 			path = ChefGPT;
 			sourceTree = "<group>";
@@ -166,6 +162,17 @@
 				855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */,
 			);
 			path = ChefGPTUITests;
+			sourceTree = "<group>";
+		};
+		9B403E4629DA244D004FBE67 /* Files for Adding Ingredients */ = {
+			isa = PBXGroup;
+			children = (
+				9B6F39B429D9E3F9006820BB /* CameraView.swift */,
+				9B6F39B629D9E3FF006820BB /* CameraPreview.swift */,
+				9B6F39B829D9E40D006820BB /* CameraModel.swift */,
+				9B6F39BA29D9EB94006820BB /* CameraFoodConfirmationView.swift */,
+			);
+			path = "Files for Adding Ingredients";
 			sourceTree = "<group>";
 		};
 		9B97376929C237F0007D373A /* Views */ = {
@@ -197,6 +204,7 @@
 		9BC0D85229D2337400EDEADB /* Pantry Tab Views */ = {
 			isa = PBXGroup;
 			children = (
+				9B403E4629DA244D004FBE67 /* Files for Adding Ingredients */,
 				9B2854F429BF75C8005DE35B /* PantryView.swift */,
 				9B7E0B5129D25DDB00E12019 /* IndividualIngredientView.swift */,
 				9B97376529C23281007D373A /* ImagePicker.swift */,
