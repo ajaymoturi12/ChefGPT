@@ -34,7 +34,8 @@ struct CameraView: View {
                 HStack {
                     Button(action: dismissMe) {
                         Text("back")
-                            .padding(10)
+                            .padding([.leading, .trailing], 15)
+                            .padding([.top, .bottom], 5)
                             .background(Color.GPTlightGrey())
                             .clipShape(Capsule())
                     }
@@ -57,7 +58,8 @@ struct CameraView: View {
                         // can retake
                         Button(action: retake) {
                             Text("retake")
-                                .padding(10)
+                                .padding([.leading, .trailing], 15)
+                                .padding([.top, .bottom], 5)
                                 .background(Color.GPTlightGrey())
                                 .clipShape(Capsule())
                         }
@@ -65,7 +67,8 @@ struct CameraView: View {
                         Spacer()
                         Button(action: confirmPhoto) {
                             Text("confirm")
-                                .padding(10)
+                                .padding([.leading, .trailing], 15)
+                                .padding([.top, .bottom], 5)
                                 .background(Color.GPTlightGrey())
                                 .clipShape(Capsule())
                         }

@@ -204,10 +204,10 @@
 		9BC0D85229D2337400EDEADB /* Pantry Tab Views */ = {
 			isa = PBXGroup;
 			children = (
-				9B403E4629DA244D004FBE67 /* Files for Adding Ingredients */,
 				9B2854F429BF75C8005DE35B /* PantryView.swift */,
 				9B7E0B5129D25DDB00E12019 /* IndividualIngredientView.swift */,
 				9B97376529C23281007D373A /* ImagePicker.swift */,
+				9B403E4629DA244D004FBE67 /* Files for Adding Ingredients */,
 			);
 			path = "Pantry Tab Views";
 			sourceTree = "<group>";

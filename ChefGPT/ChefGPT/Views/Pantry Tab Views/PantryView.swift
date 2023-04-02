@@ -16,24 +16,9 @@ struct PantryView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("Welcome to your \n Pantry")
-                    .font(.system(size: 35))
-                    .fontWeight(.bold)
+                Text("The Pantry")
+                    .font(.system(.largeTitle, design: .default, weight: .bold))
                     .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal)
-                    .padding(.vertical, 20)
-                ZStack{
-                    Rectangle()
-                        .foregroundColor(.gray)
-                        .frame(width: 360, height: 35)
-                    HStack {
-                        Text("Unsorted")
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding()
-                    }
-                    
-                }.padding()
                 
                 ScrollView {
                     VStack {
@@ -42,17 +27,9 @@ struct PantryView: View {
                         }
                     }
                 }
-                .padding()
-                
-//                Text("Out of Stock")
-//                    .font(.system(size:30))
-//                    .fontWeight(.bold)
-//                    .frame(maxWidth: .infinity, alignment: .leading)
-//                    .padding(.horizontal)
-//                    .padding(.vertical, 40)
             }
 
-            //Button Stuff
+            //Button stuff overlay
             VStack {
                 Spacer()
                 HStack {
@@ -64,12 +41,12 @@ struct PantryView: View {
                         Image(systemName: "plus.circle.fill")
                             .resizable()
                             .frame(width: 70, height: 70)
-                            .foregroundColor(.gray)
-                            .padding()
+                            .foregroundColor(.GPTorange())
                     }
                 }
             }
         }
+        .padding()
         .fullScreenCover(isPresented: $showingImagePicker) {
             CameraView()
         }

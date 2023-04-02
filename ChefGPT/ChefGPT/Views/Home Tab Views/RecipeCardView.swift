@@ -45,19 +45,19 @@ struct RecipeCardView: View {
                     Button{
                         recipe.toggleFavorited()
                     } label: {
-                        Image(systemName: "bookmark")
-                            .foregroundColor(.black)
-                            .padding(.vertical, 4)
-                            .padding(.horizontal, 6)
-                            .overlay {
-                                Capsule()
-                                    .stroke(lineWidth: 1)
-                            }
+                        
+                        Image(systemName: "star.fill")
+                                .foregroundColor(.white)
+                                .padding(10)
+                                .background(recipe.isFavorited ? .yellow : .GPTdarkGrey())
+                                .clipShape(Circle())
+                            
                     }
                     .frame(maxWidth: 30, alignment: .trailing)
                     .padding()
                 }
             }
+            .background(Color.GPTlightGrey())
             .cornerRadius(12)
         }
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class SavedRecipe: ObservableObject {
     
@@ -35,7 +36,7 @@ class SavedRecipe: ObservableObject {
     let foodImage: String
     let time: Int
     
-    var isFavorited = false
+    @Published var isFavorited = false // TODO: I dont like having UI in the data model, so I'd like to find a cleaner way to do this in the future
     
     var vegetarian: Bool
     var vegan: Bool
@@ -56,17 +57,17 @@ class SavedRecipe: ObservableObject {
         ], instructions: instructions)
     
     static let sampleData = [
-        SavedRecipe(id: 716429, name: "Peanut Butter Jelly", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", time: 5, vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 5, cookingMinutes: 5, ingredients: [
+        SavedRecipe(id: 716429, name: "Peanut Butter Jelly", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", time: 5, vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 4, cookingMinutes: 5, ingredients: [
         ExtendedIngredients(name: "Peanut Butter", amount: 2, unit: "oz"),
         ExtendedIngredients(name: "Jelly", amount: 2, unit: "oz"),
         ExtendedIngredients(name: "Bread", amount: 2, unit: "slices")
         ], instructions: instructions),
-        SavedRecipe(id: 716429, name: "Peanut Butter Jelly", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", time: 5, vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 5, cookingMinutes: 5, ingredients: [
+        SavedRecipe(id: 716428, name: "Peanut Butter Jelly", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", time: 5, vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 5, cookingMinutes: 5, ingredients: [
         ExtendedIngredients(name: "Peanut Butter", amount: 2, unit: "oz"),
         ExtendedIngredients(name: "Jelly", amount: 2, unit: "oz"),
         ExtendedIngredients(name: "Bread", amount: 2, unit: "slices")
         ], instructions: instructions),
-        SavedRecipe(id: 716429, name: "Peanut Butter Jelly", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", time: 5, vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 5, cookingMinutes: 5, ingredients: [
+        SavedRecipe(id: 716426, name: "Peanut Butter Jelly", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", time: 5, vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 6, cookingMinutes: 5, ingredients: [
         ExtendedIngredients(name: "Peanut Butter", amount: 2, unit: "oz"),
         ExtendedIngredients(name: "Jelly", amount: 2, unit: "oz"),
         ExtendedIngredients(name: "Bread", amount: 2, unit: "slices")
