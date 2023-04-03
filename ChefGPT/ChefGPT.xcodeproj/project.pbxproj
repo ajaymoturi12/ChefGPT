@@ -14,7 +14,6 @@
 		855C88F729B68EA50010A209 /* ChefGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C88F629B68EA50010A209 /* ChefGPTTests.swift */; };
 		855C890129B68EA50010A209 /* ChefGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890029B68EA50010A209 /* ChefGPTUITests.swift */; };
 		855C890329B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */; };
-		857879FA29DB335B00FB4A3A /* banana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 857879F929DB335B00FB4A3A /* banana.jpg */; };
 		9B01998929D1D940002767EA /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998829D1D93F002767EA /* RecipeCardView.swift */; };
 		9B01998B29D1DB68002767EA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998A29D1DB68002767EA /* Model.swift */; };
 		9B01998D29D1DC6B002767EA /* SavedRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998C29D1DC6B002767EA /* SavedRecipe.swift */; };
@@ -63,7 +62,6 @@
 		855C88FC29B68EA50010A209 /* ChefGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		855C890029B68EA50010A209 /* ChefGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITests.swift; sourceTree = "<group>"; };
 		855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		857879F929DB335B00FB4A3A /* banana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = banana.jpg; path = ../../../../../Downloads/banana.jpg; sourceTree = "<group>"; };
 		9B01998829D1D93F002767EA /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
 		9B01998A29D1DB68002767EA /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9B01998C29D1DC6B002767EA /* SavedRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipe.swift; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 				9B97376A29C237FC007D373A /* Backend */,
 				9B97376929C237F0007D373A /* Views */,
 				855C88E929B68EA50010A209 /* Assets.xcassets */,
-				857879F929DB335B00FB4A3A /* banana.jpg */,
 				855C88EB29B68EA50010A209 /* Preview Content */,
 			);
 			path = ChefGPT;
@@ -337,7 +334,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				855C88ED29B68EA50010A209 /* Preview Assets.xcassets in Resources */,
-				857879FA29DB335B00FB4A3A /* banana.jpg in Resources */,
 				855C88EA29B68EA50010A209 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

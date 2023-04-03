@@ -99,23 +99,23 @@ public class ImageClassifier {
         completionHandler?(requestedClassifications)
     }
     
-    func test() {
-        let classifier = ImageClassifier()
-        classifier.createImageClassifier()
-        classifier.setupClassificationRequest()
-        
-        let image = UIImage(named: "banana")
-        do {
-            try classifier.getClassifications(for: image!) { (results) in
-                DispatchQueue.main.async { [weak self] in
-                    let _ = print("results")
-                }
-            }
-        }
-        catch {
-            let _ = print("\(error)")
-        }
-    }
+//    func test() {
+//        let classifier = ImageClassifier()
+//        classifier.createImageClassifier()
+//        classifier.setupClassificationRequest()
+//        
+//        let image = UIImage(named: "banana")
+//        do {
+//            try classifier.getClassifications(for: image!) { (results) in
+//                DispatchQueue.main.async { [weak self] in
+//                    let _ = print("results")
+//                }
+//            }
+//        }
+//        catch {
+//            let _ = print("\(error)")
+//        }
+//    }
     
     private func buffer(image: UIImage) -> CVPixelBuffer? {
       let attrs = [kCVPixelBufferCGImageCompatibilityKey: kCFBooleanTrue, kCVPixelBufferCGBitmapContextCompatibilityKey: kCFBooleanTrue] as CFDictionary
