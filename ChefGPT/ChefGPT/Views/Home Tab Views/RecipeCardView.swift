@@ -39,7 +39,7 @@ struct RecipeCardView: View {
                         Text("Cooking Time : \(recipe.time) minutes")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding([.leading,.bottom])
-                            .foregroundColor(.secondary)
+
                     }
                     
                     Button{
