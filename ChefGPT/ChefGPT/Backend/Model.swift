@@ -15,4 +15,12 @@ class Model: ObservableObject {
     
     public static var fakeRecipes = SavedRecipe.sampleData
     public static var usersPantry = ExtendedIngredients.exampleData
+    
+    
+    
+    func removeFromPantry(item: ExtendedIngredients) {
+        usersPantry.removeAll { ingredient in
+            ingredient.name == item.name
+        }
+    }
 }
