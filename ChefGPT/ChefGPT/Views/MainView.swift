@@ -13,7 +13,7 @@ struct MainView: View {
     
     var body: some View {
         let classifier = ImageClassifier()
-        let _ = classifier.test()
+//        let _ = classifier.test()
         
         TabView {
             HomeView()

@@ -34,19 +34,30 @@ struct HomeView: View {
                 ScrollView(showsIndicators: false) {
                     VStack {
                         ForEach(model.usersRecipes, id:\.id) { recipe in
-                            
-                            NavigationLink {
-                                Color.green
-                            } label: {
-                                RecipeCardView()
-                                    .environmentObject(recipe)
+                            if (favoritesChosen) {
+                                if (recipe.isFavorited) {
+                                    NavigationLink {
+                                        Color.green
+                                    } label: {
+                                        RecipeCardView()
+                                            .environmentObject(recipe)
+                                    }
+                                    .accentColor(.black)
+                                }
+                            } else {
+                                NavigationLink {
+                                    Color.green
+                                } label: {
+                                    RecipeCardView()
+                                        .environmentObject(recipe)
+                                }
+                                .accentColor(.black)
                             }
-                            .accentColor(.black)
-
-                            
                         }
+                        
                     }
                 }
+                .animation(.linear(duration: 0.2))
             }
             .padding()
         }
