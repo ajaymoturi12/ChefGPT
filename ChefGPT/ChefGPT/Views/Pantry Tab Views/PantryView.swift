@@ -24,7 +24,11 @@ struct PantryView: View {
                     VStack {
                         ForEach(model.usersPantry, id:\.name) { ingredient in
                             IndividualIngredientView(ingredient: ingredient)
+                                .onLongPressGesture {
+                                    model.removeFromPantry(item: ingredient)
+                                }
                         }
+                        .animation(.linear, value: 0.2)
                     }
                 }
             }
