@@ -14,7 +14,7 @@
 		855C88F729B68EA50010A209 /* ChefGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C88F629B68EA50010A209 /* ChefGPTTests.swift */; };
 		855C890129B68EA50010A209 /* ChefGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890029B68EA50010A209 /* ChefGPTUITests.swift */; };
 		855C890329B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */; };
-		8572075029E1BE9F0069A954 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572074F29E1BE9F0069A954 /* Extensions.swift */; };
+		857879FC29DB96B000FB4A3A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857879FB29DB96B000FB4A3A /* Extensions.swift */; };
 		9B01998929D1D940002767EA /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998829D1D93F002767EA /* RecipeCardView.swift */; };
 		9B01998B29D1DB68002767EA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998A29D1DB68002767EA /* Model.swift */; };
 		9B01998D29D1DC6B002767EA /* SavedRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998C29D1DC6B002767EA /* SavedRecipe.swift */; };
@@ -33,7 +33,6 @@
 		9B6F39BB29D9EB94006820BB /* CameraFoodConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F39BA29D9EB94006820BB /* CameraFoodConfirmationView.swift */; };
 		9B7E0B5229D25DDB00E12019 /* IndividualIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E0B5129D25DDB00E12019 /* IndividualIngredientView.swift */; };
 		9B97376629C23281007D373A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B97376529C23281007D373A /* ImagePicker.swift */; };
-		9BF6387229E1B2A800349D72 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF6387129E1B2A800349D72 /* ScanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,7 @@
 		855C88FC29B68EA50010A209 /* ChefGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		855C890029B68EA50010A209 /* ChefGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITests.swift; sourceTree = "<group>"; };
 		855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8572074F29E1BE9F0069A954 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		857879FB29DB96B000FB4A3A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Backend/Extensions.swift; sourceTree = "<group>"; };
 		9B01998829D1D93F002767EA /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
 		9B01998A29D1DB68002767EA /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9B01998C29D1DC6B002767EA /* SavedRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipe.swift; sourceTree = "<group>"; };
@@ -134,12 +133,12 @@
 		855C88E429B68EA40010A209 /* ChefGPT */ = {
 			isa = PBXGroup;
 			children = (
+				857879FB29DB96B000FB4A3A /* Extensions.swift */,
 				855C88E529B68EA40010A209 /* ChefGPTApp.swift */,
 				9B97376A29C237FC007D373A /* Backend */,
 				9B97376929C237F0007D373A /* Views */,
 				855C88E929B68EA50010A209 /* Assets.xcassets */,
 				855C88EB29B68EA50010A209 /* Preview Content */,
-				8572074F29E1BE9F0069A954 /* Extensions.swift */,
 			);
 			path = ChefGPT;
 			sourceTree = "<group>";
@@ -167,6 +166,40 @@
 				855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */,
 			);
 			path = ChefGPTUITests;
+			sourceTree = "<group>";
+		};
+		8572075129E1CCD00069A954 /* Classification */ = {
+			isa = PBXGroup;
+			children = (
+				9B0542CF29C292F000D18E3B /* IngredientClassifier.mlmodel */,
+				9B12483C29D632C000CFE345 /* ImageClassifier.swift */,
+			);
+			path = Classification;
+			sourceTree = "<group>";
+		};
+		8572075229E1CD090069A954 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				9B01998A29D1DB68002767EA /* Model.swift */,
+				9B01998C29D1DC6B002767EA /* SavedRecipe.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		8572075329E1CD270069A954 /* API Interface */ = {
+			isa = PBXGroup;
+			children = (
+				9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */,
+				9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */,
+			);
+			path = "API Interface";
+			sourceTree = "<group>";
+		};
+		8572075429E1CD560069A954 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		9B403E4629DA244D004FBE67 /* Files for Adding Ingredients */ = {
@@ -197,12 +230,10 @@
 		9B97376A29C237FC007D373A /* Backend */ = {
 			isa = PBXGroup;
 			children = (
-				9B0542CF29C292F000D18E3B /* IngredientClassifier.mlmodel */,
-				9B4630B529BFE26100DCAB5A /* RecipeInfo.swift */,
-				9B4630B729BFE2A200DCAB5A /* SpoonacularRequest.swift */,
-				9B01998A29D1DB68002767EA /* Model.swift */,
-				9B01998C29D1DC6B002767EA /* SavedRecipe.swift */,
-				9B12483C29D632C000CFE345 /* ImageClassifier.swift */,
+				8572075429E1CD560069A954 /* Data */,
+				8572075129E1CCD00069A954 /* Classification */,
+				8572075329E1CD270069A954 /* API Interface */,
+				8572075229E1CD090069A954 /* Test */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -374,13 +405,12 @@
 				9B2854F329BF75C4005DE35B /* HomeView.swift in Sources */,
 				9B0542D029C292F000D18E3B /* IngredientClassifier.mlmodel in Sources */,
 				9B01998B29D1DB68002767EA /* Model.swift in Sources */,
-				8572075029E1BE9F0069A954 /* Extensions.swift in Sources */,
 				9B12483D29D632C000CFE345 /* ImageClassifier.swift in Sources */,
 				9B01998929D1D940002767EA /* RecipeCardView.swift in Sources */,
 				9B4630B829BFE2A200DCAB5A /* SpoonacularRequest.swift in Sources */,
 				9B6F39B929D9E40D006820BB /* CameraModel.swift in Sources */,
+				857879FC29DB96B000FB4A3A /* Extensions.swift in Sources */,
 				855C88E629B68EA40010A209 /* ChefGPTApp.swift in Sources */,
-				9BF6387229E1B2A800349D72 /* ScanView.swift in Sources */,
 				9B7E0B5229D25DDB00E12019 /* IndividualIngredientView.swift in Sources */,
 				9B6F39B529D9E3F9006820BB /* CameraView.swift in Sources */,
 				9B2854F129BF7593005DE35B /* MainView.swift in Sources */,
@@ -545,7 +575,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChefGPT/Preview Content\"";
-				DEVELOPMENT_TEAM = YGMU4NNJHX;
+				DEVELOPMENT_TEAM = 9UBGR8SHZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please enable camera usage to allow taking photos of food.";
@@ -559,7 +589,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ethanfox.ChefGPT;
+				PRODUCT_BUNDLE_IDENTIFIER = ajaymoturi0.ChefGPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -575,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChefGPT/Preview Content\"";
-				DEVELOPMENT_TEAM = YGMU4NNJHX;
+				DEVELOPMENT_TEAM = 9UBGR8SHZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please enable camera usage to allow taking photos of food.";
@@ -589,7 +619,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ethanfox.ChefGPT;
+				PRODUCT_BUNDLE_IDENTIFIER = ajaymoturi0.ChefGPT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
