@@ -18,15 +18,19 @@ struct MainView: View {
         TabView {
             HomeView()
                 .tabItem {
-                    Label("Home", systemImage: "square")
-                }
-            PantryView()
-                .tabItem {
-                    Label("Pantry", systemImage: "square")
+                    Label("Home", systemImage: "house.fill")
                 }
             ExploreView()
                 .tabItem {
-                    Label("Explore", systemImage: "square")
+                    Label("Explore", systemImage: "shippingbox.fill")
+                }
+            PantryView()
+                .tabItem {
+                    Label("Pantry", systemImage: "globe")
+                }
+            ScanView()
+                .tabItem {
+                    Label("Scan", systemImage: "camera.metering.none")
                 }
         }
         .environmentObject(model)

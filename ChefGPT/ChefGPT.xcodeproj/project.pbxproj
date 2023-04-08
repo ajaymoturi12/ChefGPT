@@ -32,6 +32,7 @@
 		9B6F39BB29D9EB94006820BB /* CameraFoodConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F39BA29D9EB94006820BB /* CameraFoodConfirmationView.swift */; };
 		9B7E0B5229D25DDB00E12019 /* IndividualIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E0B5129D25DDB00E12019 /* IndividualIngredientView.swift */; };
 		9B97376629C23281007D373A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B97376529C23281007D373A /* ImagePicker.swift */; };
+		9BF6387229E1B2A800349D72 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF6387129E1B2A800349D72 /* ScanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		9B6F39BA29D9EB94006820BB /* CameraFoodConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFoodConfirmationView.swift; sourceTree = "<group>"; };
 		9B7E0B5129D25DDB00E12019 /* IndividualIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualIngredientView.swift; sourceTree = "<group>"; };
 		9B97376529C23281007D373A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		9BF6387129E1B2A800349D72 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				855C88E729B68EA40010A209 /* ContentView.swift */,
 				9B2854F029BF7593005DE35B /* MainView.swift */,
+				9BF6387129E1B2A800349D72 /* ScanView.swift */,
 				9BC0D85329D2339E00EDEADB /* Home Tab Views */,
 				9BC0D85229D2337400EDEADB /* Pantry Tab Views */,
 				9BC0D85529D233BB00EDEADB /* Explore Tab Views */,
@@ -373,6 +376,7 @@
 				9B4630B829BFE2A200DCAB5A /* SpoonacularRequest.swift in Sources */,
 				9B6F39B929D9E40D006820BB /* CameraModel.swift in Sources */,
 				855C88E629B68EA40010A209 /* ChefGPTApp.swift in Sources */,
+				9BF6387229E1B2A800349D72 /* ScanView.swift in Sources */,
 				9B7E0B5229D25DDB00E12019 /* IndividualIngredientView.swift in Sources */,
 				9B6F39B529D9E3F9006820BB /* CameraView.swift in Sources */,
 				9B2854F129BF7593005DE35B /* MainView.swift in Sources */,
