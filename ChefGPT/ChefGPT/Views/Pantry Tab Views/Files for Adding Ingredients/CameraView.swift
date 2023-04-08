@@ -33,12 +33,14 @@ struct CameraView: View {
             VStack {
                 HStack {
                     Button(action: dismissMe) {
-                        Text("back")
-                            .padding([.leading, .trailing], 15)
-                            .padding([.top, .bottom], 5)
-                            .background(Color.GPTlightGrey())
-                            .clipShape(Capsule())
+                        Image(systemName: "xmark")
+                            .font(.system(size: 25))
+                            .padding(10)
+                            .backgroundStyle(.opacity(0.5))
+                            .background(.white)
+                            .cornerRadius(10)
                     }
+                    .buttonStyle(.plain)
                     Spacer()
                 }
                 Spacer()

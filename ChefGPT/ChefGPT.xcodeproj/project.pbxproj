@@ -14,7 +14,6 @@
 		855C88F729B68EA50010A209 /* ChefGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C88F629B68EA50010A209 /* ChefGPTTests.swift */; };
 		855C890129B68EA50010A209 /* ChefGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890029B68EA50010A209 /* ChefGPTUITests.swift */; };
 		855C890329B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */; };
-		857879FA29DB335B00FB4A3A /* banana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 857879F929DB335B00FB4A3A /* banana.jpg */; };
 		9B01998929D1D940002767EA /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998829D1D93F002767EA /* RecipeCardView.swift */; };
 		9B01998B29D1DB68002767EA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998A29D1DB68002767EA /* Model.swift */; };
 		9B01998D29D1DC6B002767EA /* SavedRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998C29D1DC6B002767EA /* SavedRecipe.swift */; };
@@ -33,6 +32,7 @@
 		9B6F39BB29D9EB94006820BB /* CameraFoodConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F39BA29D9EB94006820BB /* CameraFoodConfirmationView.swift */; };
 		9B7E0B5229D25DDB00E12019 /* IndividualIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E0B5129D25DDB00E12019 /* IndividualIngredientView.swift */; };
 		9B97376629C23281007D373A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B97376529C23281007D373A /* ImagePicker.swift */; };
+		9BF6387229E1B2A800349D72 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF6387129E1B2A800349D72 /* ScanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,6 @@
 		855C88FC29B68EA50010A209 /* ChefGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		855C890029B68EA50010A209 /* ChefGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITests.swift; sourceTree = "<group>"; };
 		855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		857879F929DB335B00FB4A3A /* banana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = banana.jpg; path = ../../../../../Downloads/banana.jpg; sourceTree = "<group>"; };
 		9B01998829D1D93F002767EA /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
 		9B01998A29D1DB68002767EA /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9B01998C29D1DC6B002767EA /* SavedRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipe.swift; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		9B6F39BA29D9EB94006820BB /* CameraFoodConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFoodConfirmationView.swift; sourceTree = "<group>"; };
 		9B7E0B5129D25DDB00E12019 /* IndividualIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualIngredientView.swift; sourceTree = "<group>"; };
 		9B97376529C23281007D373A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		9BF6387129E1B2A800349D72 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,6 @@
 				9B97376A29C237FC007D373A /* Backend */,
 				9B97376929C237F0007D373A /* Views */,
 				855C88E929B68EA50010A209 /* Assets.xcassets */,
-				857879F929DB335B00FB4A3A /* banana.jpg */,
 				855C88EB29B68EA50010A209 /* Preview Content */,
 			);
 			path = ChefGPT;
@@ -183,6 +182,7 @@
 			children = (
 				855C88E729B68EA40010A209 /* ContentView.swift */,
 				9B2854F029BF7593005DE35B /* MainView.swift */,
+				9BF6387129E1B2A800349D72 /* ScanView.swift */,
 				9BC0D85329D2339E00EDEADB /* Home Tab Views */,
 				9BC0D85229D2337400EDEADB /* Pantry Tab Views */,
 				9BC0D85529D233BB00EDEADB /* Explore Tab Views */,
@@ -337,7 +337,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				855C88ED29B68EA50010A209 /* Preview Assets.xcassets in Resources */,
-				857879FA29DB335B00FB4A3A /* banana.jpg in Resources */,
 				855C88EA29B68EA50010A209 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +376,7 @@
 				9B4630B829BFE2A200DCAB5A /* SpoonacularRequest.swift in Sources */,
 				9B6F39B929D9E40D006820BB /* CameraModel.swift in Sources */,
 				855C88E629B68EA40010A209 /* ChefGPTApp.swift in Sources */,
+				9BF6387229E1B2A800349D72 /* ScanView.swift in Sources */,
 				9B7E0B5229D25DDB00E12019 /* IndividualIngredientView.swift in Sources */,
 				9B6F39B529D9E3F9006820BB /* CameraView.swift in Sources */,
 				9B2854F129BF7593005DE35B /* MainView.swift in Sources */,
@@ -548,8 +548,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,8 +578,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
