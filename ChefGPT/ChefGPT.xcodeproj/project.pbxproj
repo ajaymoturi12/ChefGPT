@@ -14,6 +14,7 @@
 		855C88F729B68EA50010A209 /* ChefGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C88F629B68EA50010A209 /* ChefGPTTests.swift */; };
 		855C890129B68EA50010A209 /* ChefGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890029B68EA50010A209 /* ChefGPTUITests.swift */; };
 		855C890329B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */; };
+		8572075029E1BE9F0069A954 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8572074F29E1BE9F0069A954 /* Extensions.swift */; };
 		9B01998929D1D940002767EA /* RecipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998829D1D93F002767EA /* RecipeCardView.swift */; };
 		9B01998B29D1DB68002767EA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998A29D1DB68002767EA /* Model.swift */; };
 		9B01998D29D1DC6B002767EA /* SavedRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B01998C29D1DC6B002767EA /* SavedRecipe.swift */; };
@@ -63,6 +64,7 @@
 		855C88FC29B68EA50010A209 /* ChefGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		855C890029B68EA50010A209 /* ChefGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITests.swift; sourceTree = "<group>"; };
 		855C890229B68EA50010A209 /* ChefGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8572074F29E1BE9F0069A954 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9B01998829D1D93F002767EA /* RecipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardView.swift; sourceTree = "<group>"; };
 		9B01998A29D1DB68002767EA /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9B01998C29D1DC6B002767EA /* SavedRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedRecipe.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				9B97376929C237F0007D373A /* Views */,
 				855C88E929B68EA50010A209 /* Assets.xcassets */,
 				855C88EB29B68EA50010A209 /* Preview Content */,
+				8572074F29E1BE9F0069A954 /* Extensions.swift */,
 			);
 			path = ChefGPT;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				9B2854F329BF75C4005DE35B /* HomeView.swift in Sources */,
 				9B0542D029C292F000D18E3B /* IngredientClassifier.mlmodel in Sources */,
 				9B01998B29D1DB68002767EA /* Model.swift in Sources */,
+				8572075029E1BE9F0069A954 /* Extensions.swift in Sources */,
 				9B12483D29D632C000CFE345 /* ImageClassifier.swift in Sources */,
 				9B01998929D1D940002767EA /* RecipeCardView.swift in Sources */,
 				9B4630B829BFE2A200DCAB5A /* SpoonacularRequest.swift in Sources */,

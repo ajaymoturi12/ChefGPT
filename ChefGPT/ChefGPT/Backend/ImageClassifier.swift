@@ -1,7 +1,6 @@
 //
 //  ImageClassifier.swift
 //  ChefGPT
-//
 //  Created by Ajay Moturi on 3/30/23.
 //
 
