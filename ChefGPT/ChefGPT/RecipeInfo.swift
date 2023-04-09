@@ -18,7 +18,6 @@ struct RecipeInfo: Identifiable, Codable {
     var id: Int
     var title: String
     var image: String
-    var imageType: String
 }
 
 struct Recipe: Codable {

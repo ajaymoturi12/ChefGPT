@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="User_Recipe" representedClassName="User_Recipe" syncable="YES" codeGenerationType="class">
+        <attribute name="cookingMinutes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dairyFree" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="foodImage" optional="YES" attributeType="String"/>
+        <attribute name="glutenFree" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ingredients" optional="YES" attributeType="Transformable"/>
+        <attribute name="instructions" optional="YES" attributeType="Transformable"/>
+        <attribute name="isFavorited" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="preparationMinutes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="vegan" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="vegetarian" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+</model>
