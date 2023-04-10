@@ -42,19 +42,43 @@ struct RecipeCardView: View {
 //                            .foregroundColor(.secondary)
                     }
                     
-                    Button{
-                        recipe.toggleFavorited()
-                    } label: {
-                        
-                        Image(systemName: "star.fill")
+                    HStack(alignment: .bottom) {
+                        //classification icon;
+                        if (recipe.dairyFree == true) {
+                            Image(systemName: "drop.fill") //cant find a dairy icon
+                                
+                                .foregroundColor(.white)
+                                .padding(10)
+                                .background(.blue)
+                                .clipShape(Circle())
+                                .scaleEffect(0.5)
+                                .frame(maxWidth: 15, alignment: .trailing)
+                        }
+                        if (recipe.vegetarian == true) {
+                            Image(systemName: "leaf.fill")
+                                
+                                .foregroundColor(.white)
+                                .padding(10)
+                                .background(.green)
+                                .clipShape(Circle())
+                                .scaleEffect(0.5)
+                                .frame(maxWidth: 15, alignment: .trailing)
+                            
+                        }
+                        Button{
+                            recipe.toggleFavorited()
+                        } label: {
+                            
+                            Image(systemName: "star.fill")
                                 .foregroundColor(.white)
                                 .padding(10)
                                 .background(recipe.isFavorited ? .yellow : .GPTdarkGrey())
                                 .clipShape(Circle())
                             
+                        }
+                        .frame(maxWidth: 10, alignment: .trailing)
+                        .padding()
                     }
-                    .frame(maxWidth: 30, alignment: .trailing)
-                    .padding()
                 }
             }
             .background(Color.GPTlightGrey())
