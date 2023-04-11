@@ -36,7 +36,7 @@ struct RecipeCardView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding([.leading,.bottom])
                         
-                        Text("Cooking Time : \(recipe.time) minutes")
+                        Text("Cooking Time : \(recipe.cookingMinutes + recipe.preparationMinutes) minutes")
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding([.leading,.bottom])
 //                            .foregroundColor(.secondary)

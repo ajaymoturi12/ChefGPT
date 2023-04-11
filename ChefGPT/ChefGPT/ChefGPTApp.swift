@@ -12,7 +12,8 @@ struct ChefGPTApp: App {
     @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+                MainView()
                 .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }

@@ -119,8 +119,20 @@ class SpoonacularReq: ObservableObject {
             guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
             let secondDecodedData = try JSONDecoder().decode(Recipe.self, from: data)
             
+            var ingredients = [Encodable_Extended_Ingredients]()
+            var instructions = [Encodable_Instructions]()
+            for ing in secondDecodedData.extendedIngredients {
+                ingredients.append(Encodable_Extended_Ingredients(name:ing.name,amount: ing.amount,unit:ing.unit ))
+            }
+            for inst in secondDecodedData.analyzedInstructions {
+                var steps = [Encodable_Steps]()
+                for step in inst.steps {
+                    steps.append(Encodable_Steps(number: step.number, step: step.step))
+                }
+                instructions.append(Encodable_Instructions(name: inst.name, steps: steps))
+            }
             
-            let fullRecipe = SavedRecipe(id: id, name: recipe.title, foodImage: recipe.image, time: secondDecodedData.cookingMinutes + secondDecodedData.preparationMinutes, vegetarian: secondDecodedData.vegetarian, vegan: secondDecodedData.vegan, glutenFree: secondDecodedData.glutenFree, dairyFree: secondDecodedData.dairyFree, preparationMinutes: secondDecodedData.preparationMinutes, cookingMinutes: secondDecodedData.cookingMinutes, ingredients: secondDecodedData.extendedIngredients, instructions: secondDecodedData.analyzedInstructions)
+            let fullRecipe = SavedRecipe(id: id, name: recipe.title, foodImage: recipe.image, isFavorited: false, vegetarian: secondDecodedData.vegetarian, vegan: secondDecodedData.vegan, glutenFree: secondDecodedData.glutenFree, dairyFree: secondDecodedData.dairyFree, preparationMinutes: secondDecodedData.preparationMinutes, cookingMinutes: secondDecodedData.cookingMinutes, ingredients: ingredients, instructions: instructions)
             
             recipes.append(fullRecipe)
         }

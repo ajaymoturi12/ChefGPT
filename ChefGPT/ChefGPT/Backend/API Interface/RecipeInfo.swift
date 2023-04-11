@@ -46,12 +46,6 @@ struct Instructions: Codable {
 struct Steps: Codable{
     var number: Int
     var step: String
-    var ingredients : [Ingredients]
-}
-
-struct Ingredients: Codable {
-    var name: String
-    var image: String  // String for now
 }
 
 struct ExtendedIngredients: Codable {

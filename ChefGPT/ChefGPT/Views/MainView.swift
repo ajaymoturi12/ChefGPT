@@ -28,10 +28,10 @@ struct MainView: View {
                 .tabItem {
                     Label("Pantry", systemImage: "globe")
                 }
-            ScanView()
-                .tabItem {
-                    Label("Scan", systemImage: "camera.metering.none")
-                }
+//            ScanView()
+//                .tabItem {
+//                    Label("Scan", systemImage: "camera.metering.none")
+//                }
         }
         .environmentObject(model)
     }

@@ -5,15 +5,8 @@
 //
 
 import Foundation
-import Vision
 import UIKit
-
-struct ClassificationData {
-    let identifier: String
-    let confidence: Double
-}
-
-typealias ClassificationCompletionHandler = (([ClassificationData]) -> Void)
+import CoreML
 
 public class ImageClassifier {
     static func classify(image: UIImage?) {
