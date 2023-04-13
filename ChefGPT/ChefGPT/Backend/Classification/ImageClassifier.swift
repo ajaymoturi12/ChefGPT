@@ -9,10 +9,10 @@ import UIKit
 import CoreML
 
 public class ImageClassifier {
-    static func classify(image: UIImage?) {
+    static func classify(image: UIImage?) -> [String] {
         guard let buffer = image?.resize(size: CGSize(width: 224, height: 224))?
                         .getCVPixelBuffer() else {
-                    return
+                    fatalError("Image broke")
                 }
         
         do {
@@ -23,15 +23,19 @@ public class ImageClassifier {
             var probs = pred.classLabelProbs
             
             var ret = [String:Double]()
+            var possible = [String]()
+            
             for _ in 0...3 {
                 let max = probs.values.max()
                 if let key = probs.first(where: { $0.value == max })?.key {
+                    possible.append(key)
                     ret[key] = max
                     probs.removeValue(forKey: key)
                 }
             }
+            return possible
         } catch {
-            print(error.localizedDescription)
+            fatalError(error.localizedDescription)
         }
     }
     

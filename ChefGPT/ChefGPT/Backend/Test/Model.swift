@@ -23,4 +23,9 @@ class Model: ObservableObject {
             ingredient.name == item.name
         }
     }
+    
+    
+    func addToPantry(item: ExtendedIngredients) {
+        usersPantry.append(item)
+    }
 }

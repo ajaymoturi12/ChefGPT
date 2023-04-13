@@ -34,9 +34,9 @@
 		9B6F39B529D9E3F9006820BB /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F39B429D9E3F9006820BB /* CameraView.swift */; };
 		9B6F39B729D9E3FF006820BB /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F39B629D9E3FF006820BB /* CameraPreview.swift */; };
 		9B6F39B929D9E40D006820BB /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F39B829D9E40D006820BB /* CameraModel.swift */; };
-		9B6F39BB29D9EB94006820BB /* CameraFoodConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6F39BA29D9EB94006820BB /* CameraFoodConfirmationView.swift */; };
 		9B7E0B5229D25DDB00E12019 /* IndividualIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7E0B5129D25DDB00E12019 /* IndividualIngredientView.swift */; };
 		9B97376629C23281007D373A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B97376529C23281007D373A /* ImagePicker.swift */; };
+		9BC0F81C29E8C185007BBA4E /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0F81B29E8C185007BBA4E /* BottomSheetView.swift */; };
 		A808858B29E4C6270011D745 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A808858A29E4C6270011D745 /* ScanView.swift */; };
 		A808858D29E4C8BF0011D745 /* ScanConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A808858C29E4C8BF0011D745 /* ScanConfirmationView.swift */; };
 /* End PBXBuildFile section */
@@ -89,9 +89,9 @@
 		9B6F39B429D9E3F9006820BB /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		9B6F39B629D9E3FF006820BB /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		9B6F39B829D9E40D006820BB /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
-		9B6F39BA29D9EB94006820BB /* CameraFoodConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraFoodConfirmationView.swift; sourceTree = "<group>"; };
 		9B7E0B5129D25DDB00E12019 /* IndividualIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualIngredientView.swift; sourceTree = "<group>"; };
 		9B97376529C23281007D373A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		9BC0F81B29E8C185007BBA4E /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		A808858A29E4C6270011D745 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		A808858C29E4C8BF0011D745 /* ScanConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanConfirmationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,7 +223,6 @@
 				9B6F39B429D9E3F9006820BB /* CameraView.swift */,
 				9B6F39B629D9E3FF006820BB /* CameraPreview.swift */,
 				9B6F39B829D9E40D006820BB /* CameraModel.swift */,
-				9B6F39BA29D9EB94006820BB /* CameraFoodConfirmationView.swift */,
 			);
 			path = "Files for Adding Ingredients";
 			sourceTree = "<group>";
@@ -260,6 +259,7 @@
 				9B97376529C23281007D373A /* ImagePicker.swift */,
 				9B403E4629DA244D004FBE67 /* Files for Adding Ingredients */,
 				A808858C29E4C8BF0011D745 /* ScanConfirmationView.swift */,
+				9BC0F81B29E8C185007BBA4E /* BottomSheetView.swift */,
 				85E85D6A29E5114400567812 /* TabBarItem.swift */,
 			);
 			path = "Pantry Tab Views";
@@ -412,7 +412,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B6F39BB29D9EB94006820BB /* CameraFoodConfirmationView.swift in Sources */,
 				9B4630B629BFE26100DCAB5A /* RecipeInfo.swift in Sources */,
 				9B01998D29D1DC6B002767EA /* SavedRecipe.swift in Sources */,
 				855C88E829B68EA40010A209 /* ContentView.swift in Sources */,
@@ -433,6 +432,7 @@
 				A808858B29E4C6270011D745 /* ScanView.swift in Sources */,
 				9B6F39B529D9E3F9006820BB /* CameraView.swift in Sources */,
 				9B2854F129BF7593005DE35B /* MainView.swift in Sources */,
+				9BC0F81C29E8C185007BBA4E /* BottomSheetView.swift in Sources */,
 				85E85D6B29E5114400567812 /* TabBarItem.swift in Sources */,
 				9B2854F729BF75D1005DE35B /* ExploreView.swift in Sources */,
 				85E85D6729E4F81A00567812 /* Encodable_Classes.swift in Sources */,
@@ -597,7 +597,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChefGPT/Preview Content\"";
-				DEVELOPMENT_TEAM = 9UBGR8SHZN;
+				DEVELOPMENT_TEAM = YGMU4NNJHX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please enable camera usage to allow taking photos of food.";
@@ -627,7 +627,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChefGPT/Preview Content\"";
-				DEVELOPMENT_TEAM = 9UBGR8SHZN;
+				DEVELOPMENT_TEAM = YGMU4NNJHX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please enable camera usage to allow taking photos of food.";

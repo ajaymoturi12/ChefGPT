@@ -10,7 +10,7 @@ import SwiftUI
 struct ScanView: View {
     @State var sheetDisplayed = false
     var body: some View {
-        Color.green
+        Color.white
             .onAppear() {
                 sheetDisplayed = true
             }

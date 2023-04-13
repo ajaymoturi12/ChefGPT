@@ -84,7 +84,8 @@ struct CameraView: View {
             camera.check()
         }
         .sheet(isPresented: $showModal) {
-            Image(uiImage: UIImage(data: camera.pictureData)!)
+            let image = UIImage(data: camera.pictureData)!
+            BottomSheetView(image: image, classification: ImageClassifier.classify(image: image))
         }
     }
     
