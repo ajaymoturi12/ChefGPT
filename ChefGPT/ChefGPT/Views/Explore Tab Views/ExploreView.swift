@@ -29,12 +29,13 @@ struct ExploreView: View {
     
     var body: some View {
           VStack(spacing: 0) {
-              Button("Show Sheet") {
+              Button("Filter") {
                   showingfilterBar.toggle()
               }
               .sheet(isPresented: $showingfilterBar) {
-                  filterBar()
-              }
+                  ExploreFilterView()
+                      .presentationDetents([.large, .medium, .fraction(0.35)])
+              } 
               filters
               Divider()
                   .padding(.horizontal)

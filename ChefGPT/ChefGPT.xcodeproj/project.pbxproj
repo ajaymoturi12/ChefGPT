@@ -39,6 +39,7 @@
 		9BC0F81C29E8C185007BBA4E /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC0F81B29E8C185007BBA4E /* BottomSheetView.swift */; };
 		A808858B29E4C6270011D745 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A808858A29E4C6270011D745 /* ScanView.swift */; };
 		A808858D29E4C8BF0011D745 /* ScanConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A808858C29E4C8BF0011D745 /* ScanConfirmationView.swift */; };
+		E62704EA29EB023500736299 /* ExploreFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62704E929EB023500736299 /* ExploreFilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		9BC0F81B29E8C185007BBA4E /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		A808858A29E4C6270011D745 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		A808858C29E4C8BF0011D745 /* ScanConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanConfirmationView.swift; sourceTree = "<group>"; };
+		E62704E929EB023500736299 /* ExploreFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreFilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				9B2854F629BF75D1005DE35B /* ExploreView.swift */,
+				E62704E929EB023500736299 /* ExploreFilterView.swift */,
 			);
 			path = "Explore Tab Views";
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				855C88E629B68EA40010A209 /* ChefGPTApp.swift in Sources */,
 				9B7E0B5229D25DDB00E12019 /* IndividualIngredientView.swift in Sources */,
 				A808858B29E4C6270011D745 /* ScanView.swift in Sources */,
+				E62704EA29EB023500736299 /* ExploreFilterView.swift in Sources */,
 				9B6F39B529D9E3F9006820BB /* CameraView.swift in Sources */,
 				9B2854F129BF7593005DE35B /* MainView.swift in Sources */,
 				9BC0F81C29E8C185007BBA4E /* BottomSheetView.swift in Sources */,
