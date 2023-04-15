@@ -84,7 +84,7 @@ class SavedRecipe: ObservableObject {
         instructions: [Encodable_Instructions(name: "instruction1", steps: [Encodable_Steps(number: 1, step: "step1")])])
 
     static let sampleData = [
-        SavedRecipe(id: 716429, name: "Peanut Butter Jelly", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", isFavorited: false, vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 5, cookingMinutes: 5, ingredients: [
+        SavedRecipe(id: 716429, name: "Peanut Butter Jelly", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", isFavorited: false, vegetarian: true, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 5, cookingMinutes: 5, ingredients: [
             Encodable_Extended_Ingredients(name: "Peanut Butter", amount: 2, unit: "oz"),
             Encodable_Extended_Ingredients(name: "Jelly", amount: 2, unit: "oz"),
             Encodable_Extended_Ingredients(name: "Bread", amount: 2, unit: "slices")
