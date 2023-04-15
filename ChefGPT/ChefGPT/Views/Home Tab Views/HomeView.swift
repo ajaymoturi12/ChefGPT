@@ -33,11 +33,9 @@ struct HomeView: View {
                     
                 ScrollView(showsIndicators: false) {
                     VStack {
-                        ForEach(model.usersRecipes.filter({ recipe in
-                            favoritesChosen ? recipe.isFavorited : true
-                        }), id:\.id) { recipe in
+                        ForEach(model.usersRecipes.filter({ recipe in favoritesChosen ? recipe.isFavorited : true }), id:\.id) { recipe in
                             NavigationLink {
-                                Color.green
+                                Text("\(recipe.id)")
                             } label: {
                                 RecipeCardView()
                                     .environmentObject(recipe)
