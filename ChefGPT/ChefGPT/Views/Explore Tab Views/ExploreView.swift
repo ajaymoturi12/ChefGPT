@@ -12,6 +12,7 @@ struct Item: Hashable {
 }
 
 struct ExploreView: View {
+    @State private var showingfilterBar = false
     // content
         private let content: [Item] = [
             Item(category: "Food"),
@@ -28,6 +29,12 @@ struct ExploreView: View {
     
     var body: some View {
           VStack(spacing: 0) {
+              Button("Show Sheet") {
+                  showingfilterBar.toggle()
+              }
+              .sheet(isPresented: $showingfilterBar) {
+                  filterBar()
+              }
               filters
               Divider()
                   .padding(.horizontal)
@@ -97,6 +104,20 @@ struct ExploreView: View {
       }
       
   }
+
+
+struct filterBar: View {
+    @Environment(\.dismiss) var dismiss
+
+    var body: some View {
+        Button("Press to dismiss") {
+            dismiss()
+        }
+        .font(.title)
+        .padding()
+        .background(.black)
+    }
+}
 
   // converts array to uniques
   extension Sequence where Iterator.Element: Hashable {
