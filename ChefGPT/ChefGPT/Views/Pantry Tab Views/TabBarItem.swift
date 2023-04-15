@@ -15,7 +15,7 @@ struct TabBarItem: View {
             Rectangle()
                 .foregroundColor(Color(red:217/255, green:217/255, blue:217/255))
             HStack() {
-                CheckBoxView(checked: $checked, itemChecked: name)
+//                CheckBoxView(checked: $checked, itemChecked: name)
                 Spacer()
                 Text(name)
                 Spacer()

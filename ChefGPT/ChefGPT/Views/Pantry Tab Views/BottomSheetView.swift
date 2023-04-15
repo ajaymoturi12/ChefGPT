@@ -31,41 +31,49 @@ struct BottomSheetView: View {
                 //                    ZStack{
                 //                        CheckBoxView(checked: $checked, itemChecked: classification.first!)
                 //                    }.frame(width:50, height: 25)
-                Text(classification.first!)
+                TextField("", text: $classification.first!)
                     .font(.system(.title, design: .rounded))
                     .foregroundColor(Color(.white))
-                    .padding([.leading], 30)
+//                    .padding([.leading], 30)
                 Spacer()
-                VStack {
-                    HStack(spacing: 5) {
-                        Button{
-                            if amount > 1 {
-                                amount -= 1
-                            }
-                        } label: {
-                            Image(systemName: "circle.fill")
+                
+                HStack(spacing: 5) {
+                    Button{
+                        if amount > 1 {
+                            amount -= 1
                         }
-                        .tint(Color(red:70/255, green:56/255, blue:56/255))
-                        HStack {
-                            Text("\(amount)")
-                            Picker("Flavor", selection: $chosenQuantity) {
-                                ForEach(quantities, id:\.self) { quantity in
-                                    Text(quantity)
-                                }
-                            }
-                        }
-                        .padding([.leading], 15)
-                        .background(.white)
-                        .cornerRadius(0)
-                        
-                        Button{amount += 1} label: {Label("",systemImage: "circle.fill")}
-                            .tint(Color(red:70/255, green:56/255, blue:56/255))
+                    } label: {
+                        Image(systemName: "minus.circle.fill")
                     }
+                    .foregroundColor(.white)
+                    HStack {
+                        Text("\(amount)")
+                        Picker("Flavor", selection: $chosenQuantity) {
+                            ForEach(quantities, id:\.self) { quantity in
+                                Text(quantity)
+                            }
+                        }
+                    }
+                    .padding([.leading], 15)
+                    .background(.white)
+                    .cornerRadius(10)
                     
+                    Button {
+                        if amount <= 99 {
+                            amount += 1
+                        }
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                        
+                    }
+                    .foregroundColor(.white)
                 }
+                
+                
                 
             }
             .padding([.top, .bottom], 30)
+            .padding([.leading, .trailing], 15)
             .background(Color(red:96/255, green:96/255, blue:96/255))
             .cornerRadius(15)
             HStack{
@@ -76,13 +84,14 @@ struct BottomSheetView: View {
                     .controlSize(.large)
                 Spacer()
                 Button("Add To Pantry"){
-                    
-                    let ingredient = ExtendedIngredients(name: classification.first!, amount: Double(amount), unit: "each")
-                    
-                    model.addToPantry(item: ingredient)
-                    
-                    
-                    dismiss()
+                    if classification.first! != "" {
+                        let ingredient = ExtendedIngredients(name: classification.first!, amount: Double(amount), unit: "each")
+                        
+                        model.addToPantry(item: ingredient)
+                        
+                        
+                        dismiss()
+                    }
                 }.buttonStyle(.borderedProminent)
                     .tint(Color(red:237/255,green:104/255, blue:46/255)).foregroundColor(.white)
                     .controlSize(.large)
