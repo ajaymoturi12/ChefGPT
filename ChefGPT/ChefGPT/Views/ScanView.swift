@@ -10,13 +10,13 @@ import SwiftUI
 struct ScanView: View {
     @State var sheetDisplayed = false
     var body: some View {
-        Color.white
-            .onAppear() {
-                sheetDisplayed = true
-            }
-            .fullScreenCover(isPresented: $sheetDisplayed) {
-                CameraView()
-            }
+        Button("Display camera") {
+            
+            sheetDisplayed = true
+        }
+        .fullScreenCover(isPresented: $sheetDisplayed) {
+            CameraView()
+        }
     }
 }
 
