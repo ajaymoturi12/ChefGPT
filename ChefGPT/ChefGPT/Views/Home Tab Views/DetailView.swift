@@ -39,7 +39,7 @@ struct DetailView: View {
                         dismiss()
                     }
                     .buttonStyle(.borderedProminent)
-                    .tint(Color(red:96/255, green:96/255, blue:96/255)).foregroundColor(.white)
+                    .tint(.white).foregroundColor(.black)
                     Spacer()
                 }
                 Spacer()
@@ -82,17 +82,6 @@ extension DetailView {
             HStack{
                 Text("Prep: \(String(recipe.preparationMinutes)) mins")
                 Text("Cook: \(String(recipe.cookingMinutes)) mins")
-            }
-            .font(.title3)
-            .foregroundColor(.secondary)
-            
-            Text("Missing Ingredients")
-                .font(.title3)
-                .fontWeight(.semibold)
-            HStack() {
-                Text("Milk")
-                Text("Pasta")
-                Text("Tomatoes")
             }
             .font(.title3)
             .foregroundColor(.secondary)
