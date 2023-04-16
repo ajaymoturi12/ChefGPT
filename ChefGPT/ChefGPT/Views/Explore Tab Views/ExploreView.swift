@@ -35,7 +35,6 @@ struct ExploreView: View {
                           Task {
                               do {
                                   try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
-                                  print(filterRecipes)
                               } catch {
                                   print(error)
                               }
@@ -45,7 +44,6 @@ struct ExploreView: View {
                           Task {
                               do {
                                   try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
-                                  print(filterRecipes)
                               } catch {
                                   print(error)
                               }
@@ -56,7 +54,6 @@ struct ExploreView: View {
                           Task {
                               do {
                                   try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
-                                  print(filterRecipes)
                               } catch {
                                   print(error)
                               }
@@ -77,7 +74,6 @@ struct ExploreView: View {
                   Task {
                       do {
                           try await pantryRecipes = SpoonacularReq.getRecipesGivenIngredients(ingredients: model.getUserIngredients(), count: 10)
-                          print(pantryRecipes)
                       } catch {
                           print(error)
                       }
@@ -88,19 +84,16 @@ struct ExploreView: View {
               ScrollView(showsIndicators: false) {
                   VStack {
                       ForEach(selectedSource == .Pantry ? pantryRecipes : filterRecipes, id:\.id) { recipe in
-                            NavigationLink {
-                              Color.green
+                          NavigationLink {
+                              DetailView()
                           } label: {
                               RecipeCardView()
                                   .environmentObject(recipe)
                           }
                           .accentColor(.black)
                       }
-                      
                   }
               }
-
-              
           }
       }
       

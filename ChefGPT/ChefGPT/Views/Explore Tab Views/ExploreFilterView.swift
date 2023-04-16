@@ -14,13 +14,15 @@ enum time: Int {
     case Hour = 60
 }
 enum cuisine : String {
+    case None = ""
     case Chinese
     case Mexican
     case Indian
     case Italian
+    case American
 }
 enum dietary: String {
-    case None, Vegan, Vegetarian, GlutenFree, DairyFree
+    case None = "", Vegan, Vegetarian, GlutenFree, DairyFree
 }
 
 
@@ -35,14 +37,17 @@ struct ExploreFilterView: View {
         VStack {
             Text("Cuisine Type: ")
             Picker("Cuisine", selection: $selectedCuisine) {
+                Text("Any").tag(cuisine.None)
                 Text("Chinese").tag(cuisine.Chinese)
                 Text("Mexican").tag(cuisine.Mexican)
                 Text("Indian").tag(cuisine.Indian)
                 Text("Italian").tag(cuisine.Italian)
+                Text("American").tag(cuisine.American)
             }.pickerStyle(.segmented).colorMultiply(.GPTorange())
             
             Text("Dietary Restrictions: ")
             Picker("Dietary", selection: $selectedDietary) {
+                Text("None").tag(dietary.None)
                 Text("Vegan").tag(dietary.Vegan)
                 Text("Vegetarian").tag(dietary.Vegetarian)
                 Text("GlutenFree").tag(dietary.GlutenFree)
