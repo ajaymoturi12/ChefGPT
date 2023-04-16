@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
+let apiKey = "801ec94c3851432f8f57ecfa49c0ad25"
 class SpoonacularReq: ObservableObject {
-    let apiKey = "801ec94c3851432f8f57ecfa49c0ad25"
     @Published var results: Results
     @Published var curRecipe: Recipe
     
@@ -18,14 +18,14 @@ class SpoonacularReq: ObservableObject {
         self.curRecipe = Recipe(vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: -1, cookingMinutes: -1, analyzedInstructions: [], extendedIngredients: [])
     }
     
-    private func get_recipes_from_ingredients(ingredient_list: [String] = [], num_recipes: Int = 5) {
+    private static func get_recipes_from_ingredients(ingredient_list: [String] = [], num_recipes: Int = 5) -> [SavedRecipe] {
             let str = "https://api.spoonacular.com/recipes/findByIngredients?ingredients=\(ingredient_list.joined(separator: ",+"))&number=\(num_recipes)&apiKey=\(apiKey)"
             let url = URL(string: str.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!
+            var recipes = [SavedRecipe]()
             
             var request = URLRequest(url: url)
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.httpMethod = "GET"
-            
             let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if let error = error {
                     print("Request error: ", error)
@@ -38,9 +38,26 @@ class SpoonacularReq: ObservableObject {
                     guard let data = data else { return }
                     DispatchQueue.main.async {
                         do {
-                            let decodedData = try JSONDecoder().decode(Results.self, from: data)
-                            self.results = decodedData
-    //                        print(self.results)
+                            let decodedData = try JSONDecoder().decode([RecipeInfo].self, from: data)
+                            for recipe in decodedData {
+                                let info = get_recipe_info(id: recipe.id)!
+                                var ingredients = [Encodable_Extended_Ingredients]()
+                                var instructions = [Encodable_Instructions]()
+                                for ing in info.extendedIngredients {
+                                    ingredients.append(Encodable_Extended_Ingredients(name:ing.name,amount: ing.amount,unit:ing.unit ))
+                                }
+                                for inst in info.analyzedInstructions {
+                                    var steps = [Encodable_Steps]()
+                                    for step in inst.steps {
+                                        steps.append(Encodable_Steps(number: step.number, step: step.step))
+                                    }
+                                    instructions.append(Encodable_Instructions(name: inst.name, steps: steps))
+                                }
+
+                                let fullRecipe = SavedRecipe(id: recipe.id, name: recipe.title, foodImage: recipe.image, isFavorited: false, vegetarian: info.vegetarian, vegan: info.vegan, glutenFree: info.glutenFree, dairyFree: info.dairyFree, preparationMinutes: info.preparationMinutes, cookingMinutes: info.cookingMinutes, ingredients: ingredients, instructions: instructions)
+
+                                recipes.append(fullRecipe)
+                            }
                         } catch let error {
                             print("Error decoding: ", error)
                         }
@@ -49,10 +66,11 @@ class SpoonacularReq: ObservableObject {
             }
             
             dataTask.resume()
+            return recipes
         }
         
-    private func get_recipe_from_filters(cuisine: String = "", equipment: String = "", diet: [String] = [], intolerances: [String], max_ready_time: Int, num_recipes: Int = 5) {
-        let str = "https://api.spoonacular.com/recipes/complexSearch?intolerances=\(intolerances.joined(separator: ","))&max_ready_time=\(max_ready_time)&diet=\(diet.joined(separator:","))&number=\(num_recipes)&cuisine=\(cuisine)&equipment=\(equipment)&apiKey=801ec94c3851432f8f57ecfa49c0ad25"
+    private static func get_recipe_from_filters(cuisine: String = "", equipment: String = "", diet: [String] = [], intolerances: [String], max_ready_time: Int, num_recipes: Int = 5) {
+        let str = "https://api.spoonacular.com/recipes/complexSearch?intolerances=\(intolerances.joined(separator: ","))&max_ready_time=\(max_ready_time)&diet=\(diet.joined(separator:","))&number=\(num_recipes)&cuisine=\(cuisine)&equipment=\(equipment)&apiKey=\(apiKey)"
         let url = URL(string: str.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!
         
         var request = URLRequest(url: url)
@@ -72,7 +90,7 @@ class SpoonacularReq: ObservableObject {
                 DispatchQueue.main.async {
                     do {
                         let decodedData = try JSONDecoder().decode(Results.self, from: data)
-                        self.results = decodedData
+//                        self.results = decodedData
 //                        print(self.results)
                     } catch let error {
                         print("Error decoding: ", error)
@@ -84,10 +102,11 @@ class SpoonacularReq: ObservableObject {
         dataTask.resume()
     }
     
-    private func get_recipe_info(id: Int) {
-        let str = "https://api.spoonacular.com/recipes/\(id)/information?includeNutrition=false&apiKey=801ec94c3851432f8f57ecfa49c0ad25"
+    private static func get_recipe_info(id: Int) -> Recipe? {
+        let str = "https://api.spoonacular.com/recipes/\(id)/information?includeNutrition=false&apiKey=\(apiKey)"
         let url = URL(string: str.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!)!
-
+        var ret : Recipe?
+        
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
@@ -101,24 +120,26 @@ class SpoonacularReq: ObservableObject {
             guard let response = response as? HTTPURLResponse else { return }
 
             if response.statusCode == 200 {
-                guard let data = data else { return }
+                guard let data = data else {
+                    return }
                 DispatchQueue.main.async {
                     do {
                         let decodedData = try JSONDecoder().decode(Recipe.self, from: data)
-                        self.curRecipe = decodedData
-//                        print(self.curRecipe)
+                        ret = decodedData
                     } catch let error {
                         print("Error decoding: ", error)
+                        return
                     }
                 }
             }
         }
         dataTask.resume()
+        return ret
     }
     
     
     // This is a combination of the two methods above shoved together, and clean up with some async await 🤓👌
-    func getRecipesGivenIngredients(ingredients: [String], count: Int) async throws -> [SavedRecipe] {
+    static func getRecipesGivenIngredients(ingredients: [String], count: Int) async throws -> [SavedRecipe] {
         
         var recipes = [SavedRecipe]()
         
@@ -134,8 +155,8 @@ class SpoonacularReq: ObservableObject {
         
         guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
         
-        let decodedData = try JSONDecoder().decode(Results.self, from: data)
-        for recipe in decodedData.results {
+        let decodedData = try JSONDecoder().decode([RecipeInfo].self, from: data)
+        for recipe in decodedData {
             let id = recipe.id
             
             let secondString = "https://api.spoonacular.com/recipes/\(id)/information?includeNutrition=false&apiKey=\(apiKey)"
@@ -172,7 +193,7 @@ class SpoonacularReq: ObservableObject {
         return recipes
     }
     
-    func getRecipesGivenFilters(cuisine: String = "", equipment: String = "", diet: [String] = [], intolerances: [String], max_ready_time: Int, num_recipes: Int = 5) async throws -> [SavedRecipe] {
+    static func getRecipesGivenFilters(cuisine: String = "", equipment: String = "", diet: [String] = [], intolerances: [String], max_ready_time: Int, num_recipes: Int = 5) async throws -> [SavedRecipe] {
         
         var recipes = [SavedRecipe]()
         

@@ -12,9 +12,6 @@ struct MainView: View {
     @StateObject var model = Model()
     
     var body: some View {
-        let classifier = ImageClassifier()
-//        let _ = classifier.test()
-        
         TabView {
             HomeView()
                 .tabItem {

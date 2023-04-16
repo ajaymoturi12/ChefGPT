@@ -6,26 +6,22 @@
 //
 
 import SwiftUI
-struct Item: Hashable {
-    let name: String = "Placeholder"
-    let category: String
+
+enum Source: String {
+    case Pantry, Filters
 }
 
 struct ExploreView: View {
-    @State private var showingfilterBar = false
-    // content
-        private let content: [Item] = [
-            Item(category: "Food"),
-            Item(category: "Vegan"),
-            Item(category: "Chinese"),
-            Item(category: "Cuisine"),
-            Item(category: "Itallian"),
-        ]
-    
-    // current filter
-    @State private var filter: String = ""
-    
     @EnvironmentObject var model: Model
+    
+    @State var showingfilterBar = false
+    @State var cuisine: cuisine = .Chinese
+    @State var time: time = .Five
+    @State var dietary: dietary = .DairyFree
+    
+    @State var selectedSource: Source = .Pantry;
+    @State var pantryRecipes: [SavedRecipe] = []
+    @State var filterRecipes: [SavedRecipe] = []
     
     var body: some View {
           VStack(spacing: 0) {
@@ -33,104 +29,85 @@ struct ExploreView: View {
                   showingfilterBar.toggle()
               }
               .sheet(isPresented: $showingfilterBar) {
-                  ExploreFilterView()
+                  ExploreFilterView(show: $showingfilterBar, selectedCuisine: $cuisine, selectedDietary: $dietary, selectedTime: $time)
                       .presentationDetents([.large, .medium, .fraction(0.35)])
-              } 
-              filters
+                      .onChange(of:cuisine) { newValue in
+                          Task {
+                              do {
+                                  try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
+                                  print(filterRecipes)
+                              } catch {
+                                  print(error)
+                              }
+                          }
+                      }
+                      .onChange(of:dietary) { newValue in
+                          Task {
+                              do {
+                                  try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
+                                  print(filterRecipes)
+                              } catch {
+                                  print(error)
+                              }
+                          }
+                      }
+
+                      .onChange(of:time) { newValue in
+                          Task {
+                              do {
+                                  try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
+                                  print(filterRecipes)
+                              } catch {
+                                  print(error)
+                              }
+                          }
+                      }
+              }
+              
               Divider()
                   .padding(.horizontal)
-              filteredContent
-          }
-      }
-      
-      var filters: some View {
-          ScrollView(.horizontal, showsIndicators: false) {
-              HStack {
-                  Button(action: {
-                      withAnimation {
-                          self.filter = ""
+              
+              Picker("Source", selection: $selectedSource) {
+                  Text("Pantry").tag(Source.Pantry)
+                  Text("Filters").tag(Source.Filters)
+                  
+              }
+              .pickerStyle(.segmented).colorMultiply(.GPTorange())
+              .onAppear(){
+                  Task {
+                      do {
+                          try await pantryRecipes = SpoonacularReq.getRecipesGivenIngredients(ingredients: model.getUserIngredients(), count: 10)
+                          print(pantryRecipes)
+                      } catch {
+                          print(error)
                       }
-                  }) {
-                      Text("All")
-                          .padding(7)
-                          .padding(.horizontal)
-                          .background(
-                              Rectangle()
-                                  .cornerRadius(5)
-                                  .foregroundColor(self.filter.isEmpty ? nil : Color(uiColor: .placeholderText))
-                                  .opacity(1/4)
-                          )
+
                   }
-                  ForEach(self.content.map({$0.category}).unique(), id: \.self) { category in
-                      Button(action: {
-                          withAnimation {
-                              self.filter = category
+              }
+
+              ScrollView(showsIndicators: false) {
+                  VStack {
+                      ForEach(selectedSource == .Pantry ? pantryRecipes : filterRecipes, id:\.id) { recipe in
+                            NavigationLink {
+                              Color.green
+                          } label: {
+                              RecipeCardView()
+                                  .environmentObject(recipe)
                           }
-                      }) {
-                          Text(category)
-                              .padding(7)
-                              .padding(.horizontal)
-                              .background(
-                                  Rectangle()
-                                      .cornerRadius(5)
-                                      .foregroundColor(self.filter == category ? nil : Color(uiColor: .placeholderText))
-                                      .opacity(1/4)
-                              )
+                          .accentColor(.black)
                       }
+                      
                   }
               }
-              .padding()
-          }
-      }
-      
-      var filteredContent: some View {
-          ScrollView {
-              VStack {
-                  ForEach(self.filter.isEmpty ? self.content : self.content.filter({$0.category == self.filter}), id: \.self) { item in
-                      HStack {
-                          Text(item.name)
-                          Spacer()
-                          Text(item.category)
-                      }
-                      .padding()
-                      .transition(
-                          .asymmetric(
-                              insertion: .move(edge: .trailing).combined(with: .opacity),
-                              removal: .move(edge: .leading).combined(with: .opacity)
-                          )
-                      )
-                  }
-              }
+
+              
           }
       }
       
   }
 
-
-struct filterBar: View {
-    @Environment(\.dismiss) var dismiss
-
-    var body: some View {
-        Button("Press to dismiss") {
-            dismiss()
-        }
-        .font(.title)
-        .padding()
-        .background(.black)
-    }
-}
-
-  // converts array to uniques
-  extension Sequence where Iterator.Element: Hashable {
-      func unique() -> [Iterator.Element] {
-          var seen: Set<Iterator.Element> = []
-          return filter { seen.insert($0).inserted }
-      }
-  }
-
-
-struct ExploreView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExploreView()
-    }
-}
+//struct ExploreView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ExploreView(cuisine: <#Binding<cuisine>#>, time: <#Binding<time>#>, dietary: <#Binding<dietary>#>)
+//    }
+//}

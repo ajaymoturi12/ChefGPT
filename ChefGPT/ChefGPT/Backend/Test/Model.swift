@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Model: ObservableObject {
     
@@ -27,5 +28,13 @@ class Model: ObservableObject {
     
     func addToPantry(item: ExtendedIngredients) {
         usersPantry.append(item)
+    }
+    
+    func getUserIngredients() -> [String] {
+        var ingredients : [String] = []
+        for ingredient in self.usersPantry {
+            ingredients.append(ingredient.name)
+        }
+        return ingredients
     }
 }

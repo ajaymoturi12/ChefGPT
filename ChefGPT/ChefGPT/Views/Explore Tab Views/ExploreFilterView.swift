@@ -13,19 +13,22 @@ enum time: Int {
     case Thirty = 30
     case Hour = 60
 }
-enum cuisine {
-    case Chinese, Mexican, Indian, Italian;
+enum cuisine : String {
+    case Chinese
+    case Mexican
+    case Indian
+    case Italian
 }
-enum dietary {
-    case Vegan, Vegetarian, GlutenFree, DairyFree;
+enum dietary: String {
+    case None, Vegan, Vegetarian, GlutenFree, DairyFree
 }
 
 
 struct ExploreFilterView: View {
-    @State private var showSheet: Bool =  false;
-    @State private var selectedCuisine: cuisine = .Chinese
-    @State private var selectedDietary: dietary = .Vegan;
-    @State private var selectedTime: time = .Five;
+    @Binding var show: Bool
+    @Binding var selectedCuisine: cuisine
+    @Binding var selectedDietary: dietary
+    @Binding var selectedTime: time
 
     var body: some View {
         
@@ -40,7 +43,7 @@ struct ExploreFilterView: View {
             
             Text("Dietary Restrictions: ")
             Picker("Dietary", selection: $selectedDietary) {
-                    Text("Vegan").tag(dietary.Vegan)
+                Text("Vegan").tag(dietary.Vegan)
                 Text("Vegetarian").tag(dietary.Vegetarian)
                 Text("GlutenFree").tag(dietary.GlutenFree)
                 Text("DairyFree").tag(dietary.DairyFree)
@@ -58,115 +61,8 @@ struct ExploreFilterView: View {
 }
 
 
-struct ExploreFilterView_Previews: PreviewProvider {
-    static var previews: some View {
-        ExploreFilterView()
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        Button("Filter") {
-//            showSheet.toggle();
-//        }
-//        .sheet(isPresented: $showSheet) {
-//            HStack() {
-//                //Cuisine Filter
-//                VStack {
-////                    Text("Cuisine Type: ");
-////                    Toggle(isOn: $isSelected) {
-////                        Label(isSelected ? "Chinese" : "Chinese",
-////                              systemImage: "Chinese")
-////                        .symbolVariant(isSelected ? .fill : .none)
-////                        Label(isSelected ? "Mexican": "Mexican",
-////                              systemImage: "Mexican")
-////                        .symbolVariant(isSelected ? .fill : .none)
-////                    }.toggleStyle(.button)
-////
-////                    Toggle(isOn: $isSelected) {
-////
-////                    }.toggleStyle(.button)
-////
-////                    Toggle(isOn: $isSelected) {
-////                        Label(isSelected ? "Indian": "Indian",
-////                              systemImage: "Indian")
-////                        .symbolVariant(isSelected ? .fill : .none)
-////                    }.toggleStyle(.button)
-////
-////                    Toggle(isOn: $isSelected) {
-////                        Label(isSelected ? "Italian": "Italian",
-////                              systemImage: "Italian")
-////                        .symbolVariant(isSelected ? .fill : .none)
-////                    }.toggleStyle(.button)
-//
-//                }
-//                //Dietary Filter
-//                VStack {
-//                    Text("Dietary: ");
-//                    Toggle(isOn: $isSelected) {
-//                        Label(isSelected ? "Vegan" : "Vegan",
-//                              systemImage: "Vegan")
-//                        .symbolVariant(isSelected ? .fill : .none)
-//                    }.toggleStyle(.button)
-//
-//                    Toggle(isOn: $isSelected) {
-//                        Label(isSelected ? "Vegetarian": "Vegetarian",
-//                              systemImage: "Vegetarian")
-//                        .symbolVariant(isSelected ? .fill : .none)
-//                    }.toggleStyle(.button)
-//
-//                    Toggle(isOn: $isSelected) {
-//                        Label(isSelected ? "GlutenFree": "GlutenFree",
-//                              systemImage: "GlutenFree")
-//                        .symbolVariant(isSelected ? .fill : .none)
-//                    }.toggleStyle(.button)
-//
-//                    Toggle(isOn: $isSelected) {
-//                        Label(isSelected ? "DairyFree": "DairyFree",
-//                              systemImage: "DairyFree")
-//                        .symbolVariant(isSelected ? .fill : .none)
-//                    }.toggleStyle(.button)
-//                }
-//                //Time Filter
-//                VStack {
-//                    Text("Dietary: ");
-//                    Toggle(isOn: $isSelected) {
-//                        Label(isSelected ? "5 mins" : "5 mins",
-//                              systemImage: "5 mins")
-//                        .symbolVariant(isSelected ? .fill : .none)
-//                    }.toggleStyle(.button)
-//
-//                    Toggle(isOn: $isSelected) {
-//                        Label(isSelected ? "10 mins": "10 mins",
-//                              systemImage: "10 mins")
-//                        .symbolVariant(isSelected ? .fill : .none)
-//                    }.toggleStyle(.button)
-//
-//                    Toggle(isOn: $isSelected) {
-//                        Label(isSelected ? "30 mins": "30 mins",
-//                              systemImage: "30 mins")
-//                        .symbolVariant(isSelected ? .fill : .none)
-//                    }.toggleStyle(.button)
-//
-//                    Toggle(isOn: $isSelected) {
-//                        Label(isSelected ? "1+ hour": "1+ hour",
-//                              systemImage: "1+ hour")
-//                        .symbolVariant(isSelected ? .fill : .none)
-//                    }.toggleStyle(.button)
-//                }
-//            }
-//
-//        }
+//struct ExploreFilterView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ExploreFilterView()
+//    }
+//}
