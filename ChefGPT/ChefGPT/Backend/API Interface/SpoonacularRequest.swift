@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-let apiKey1 = "801ec94c3851432f8f57ecfa49c0ad25"
-let apiKey = "094cd7839ef8471ca3dcd4b1c471e247"
+let apiKey1 = "a823bf180fbc432c805d85356437d116"
+let apiKey = "a823bf180fbc432c805d85356437d116"
 class SpoonacularReq: ObservableObject {
     @Published var results: Results
     @Published var curRecipe: Recipe

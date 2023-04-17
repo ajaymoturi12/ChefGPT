@@ -24,42 +24,22 @@ struct ExploreView: View {
     @State var filterRecipes: [SavedRecipe] = []
     
     var body: some View {
-          VStack(spacing: 0) {
-              Button("Filter") {
-                  showingfilterBar.toggle()
+          VStack {
+              Text("Welcome Home")
+                  .font(.system(.largeTitle, design: .default, weight: .bold))
+                  .frame(maxWidth: .infinity, alignment: .leading)
+              Button {
+                  showingfilterBar = true
+              } label: {
+                  Label("Filter", systemImage: "line.3.horizontal")
+                      .padding([.leading, .trailing], 20)
+                      .padding([.top, .bottom], 10)
+                            // #0B6F6F
+                      .background(Color(red: 11/255, green: 111/255, blue: 111/255))
+                      .cornerRadius(15)
               }
-              .sheet(isPresented: $showingfilterBar) {
-                  ExploreFilterView(show: $showingfilterBar, selectedCuisine: $cuisine, selectedDietary: $dietary, selectedTime: $time)
-                      .presentationDetents([.large, .medium, .fraction(0.35)])
-                      .onChange(of:cuisine) { newValue in
-                          Task {
-                              do {
-                                  try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
-                              } catch {
-                                  print(error)
-                              }
-                          }
-                      }
-                      .onChange(of:dietary) { newValue in
-                          Task {
-                              do {
-                                  try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
-                              } catch {
-                                  print(error)
-                              }
-                          }
-                      }
-
-                      .onChange(of:time) { newValue in
-                          Task {
-                              do {
-                                  try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
-                              } catch {
-                                  print(error)
-                              }
-                          }
-                      }
-              }
+              .buttonStyle(.plain)
+              .foregroundColor(.white)
               
               Divider()
                   .padding(.horizontal)
@@ -94,6 +74,39 @@ struct ExploreView: View {
                       }
                   }
               }
+          }
+          .padding()
+          .sheet(isPresented: $showingfilterBar) {
+              ExploreFilterView(show: $showingfilterBar, selectedCuisine: $cuisine, selectedDietary: $dietary, selectedTime: $time)
+                  .presentationDetents([.large, .medium, .fraction(0.35)])
+                  .onChange(of:cuisine) { newValue in
+                      Task {
+                          do {
+                              try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
+                          } catch {
+                              print(error)
+                          }
+                      }
+                  }
+                  .onChange(of:dietary) { newValue in
+                      Task {
+                          do {
+                              try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
+                          } catch {
+                              print(error)
+                          }
+                      }
+                  }
+
+                  .onChange(of:time) { newValue in
+                      Task {
+                          do {
+                              try await filterRecipes = SpoonacularReq.getRecipesGivenFilters(cuisine: cuisine.rawValue, equipment: "", diet: [dietary.rawValue], intolerances: [], max_ready_time: time.rawValue, num_recipes: 10)
+                          } catch {
+                              print(error)
+                          }
+                      }
+                  }
           }
       }
       

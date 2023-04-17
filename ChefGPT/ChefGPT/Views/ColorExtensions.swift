@@ -26,4 +26,8 @@ extension Color {
     public static func GPTlightGreen() -> Color { // #BDE6AD
         Color.init(red: 189/255, green: 230/255, blue: 173/255)
     }
+    
+    public static func GPTdarkGreen() -> Color { // #0B6F6F
+        Color.init(red: 11/255, green: 111/255, blue: 111/255)
+    }
 }

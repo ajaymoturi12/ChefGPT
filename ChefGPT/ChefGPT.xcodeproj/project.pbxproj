@@ -605,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChefGPT/Preview Content\"";
-				DEVELOPMENT_TEAM = R3RP5QQ236;
+				DEVELOPMENT_TEAM = YGMU4NNJHX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please enable camera usage to allow taking photos of food.";
@@ -635,7 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ChefGPT/Preview Content\"";
-				DEVELOPMENT_TEAM = R3RP5QQ236;
+				DEVELOPMENT_TEAM = YGMU4NNJHX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please enable camera usage to allow taking photos of food.";
