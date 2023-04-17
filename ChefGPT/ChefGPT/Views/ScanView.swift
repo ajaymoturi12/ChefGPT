@@ -11,22 +11,27 @@ struct ScanView: View {
     @State var sheetDisplayed = false
     var body: some View {
         VStack {
-            Button("Camera") {
+            Button {
                 sheetDisplayed = true
+            } label: {
+                Text("Camera")
+                    .buttonStyle(.plain)
+                    .foregroundColor(.white)
+                    .font(.system(.title, design:.rounded, weight: .heavy))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.GPTorange())
             }
-            .buttonStyle(.plain)
-            .foregroundColor(.white)
-            .font(.system(.title, design:.rounded, weight: .heavy))
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(.red)
-            Button("Photo Library") {
-                
+            
+            Button {
+                sheetDisplayed = true
+            } label: {
+                Text("Photo Library")
+                    .buttonStyle(.plain)
+                    .foregroundColor(.white)
+                    .font(.system(.title, design:.rounded, weight: .heavy))
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.GPTdarkGreen())
             }
-            .buttonStyle(.plain)
-            .foregroundColor(.white)
-            .font(.system(.title, design:.rounded, weight: .heavy))
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(.green)
             Spacer()
         }
         .fullScreenCover(isPresented: $sheetDisplayed) {
