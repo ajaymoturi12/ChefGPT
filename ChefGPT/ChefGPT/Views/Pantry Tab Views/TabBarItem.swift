@@ -14,12 +14,10 @@ struct TabBarItem: View {
         ZStack {
             Rectangle()
                 .foregroundColor(Color(red:217/255, green:217/255, blue:217/255))
-            HStack() {
-//                CheckBoxView(checked: $checked, itemChecked: name)
-                Spacer()
+            HStack {
                 Text(name)
-                Spacer()
-            }.padding()
+            }
+            .padding()
             
         }.frame(width:325, height:60).cornerRadius(15)
     }

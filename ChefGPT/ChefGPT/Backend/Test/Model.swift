@@ -37,4 +37,12 @@ class Model: ObservableObject {
         }
         return ingredients
     }
+    
+    func addRecipe(recipe: SavedRecipe) {
+        usersRecipes.append(recipe)
+    }
+    
+    func saveRecipes() { // TODO: Method that just saves recipes to CoreData
+        
+    }
 }

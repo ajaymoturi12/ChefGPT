@@ -1,6 +1,10 @@
+//
+//  BottomSheetView.swift
+//
+//  Created by Jalen.
+//
+
 import SwiftUI
-
-
 
 struct BottomSheetView: View {
     @Environment(\.dismiss) var dismiss
@@ -28,13 +32,10 @@ struct BottomSheetView: View {
             Text("Here's what we see").bold().font(.system(size: 35)).padding(.bottom, 10)
             
             HStack {
-                //                    ZStack{
-                //                        CheckBoxView(checked: $checked, itemChecked: classification.first!)
-                //                    }.frame(width:50, height: 25)
+
                 TextField("", text: $classification.first!)
                     .font(.system(.title, design: .rounded))
                     .foregroundColor(Color(.white))
-//                    .padding([.leading], 30)
                 Spacer()
                 
                 HStack(spacing: 5) {
@@ -76,19 +77,18 @@ struct BottomSheetView: View {
             .padding([.leading, .trailing], 15)
             .background(Color(red:96/255, green:96/255, blue:96/255))
             .cornerRadius(15)
-            HStack{
-                Button("Nope, Rescan"){
+            HStack {
+                Button("Nope, Rescan") {
                     dismiss()
                 }.buttonStyle(.borderedProminent)
                     .tint(Color(.systemGray3)).foregroundColor(.black)
                     .controlSize(.large)
                 Spacer()
-                Button("Add To Pantry"){
+                Button("Add To Pantry") {
                     if classification.first! != "" {
                         let ingredient = ExtendedIngredients(name: classification.first!, amount: Double(amount), unit: "each")
                         
                         model.addToPantry(item: ingredient)
-                        
                         
                         dismiss()
                     }
@@ -96,7 +96,11 @@ struct BottomSheetView: View {
                     .tint(Color(red:237/255,green:104/255, blue:46/255)).foregroundColor(.white)
                     .controlSize(.large)
             }
-            Text("Or, it may be").bold().font(.system(size: 30)).frame(alignment: .leading).padding([.trailing], 160)
+            Text("Or, it may be")
+                .bold()
+                .font(.system(size: 30))
+                .frame(alignment: .leading)
+                .padding([.trailing], 160)
             ZStack {
                 Rectangle().foregroundColor(Color(red:96/255, green:96/255, blue:96/255))
                 VStack {
@@ -108,7 +112,9 @@ struct BottomSheetView: View {
                             }
                     }
                 }
-            }.frame(width:350, height: 220).cornerRadius(15)
+            }
+            .frame(width:350, height: 220)
+            .cornerRadius(15)
             Spacer()
         }
         .padding([.leading, .trailing])
@@ -116,22 +122,6 @@ struct BottomSheetView: View {
         .animation(.default, value: 0.5)
     }
 }
-
-struct CheckBoxView: View {
-    @Binding var checked: Bool
-    @State var itemChecked: String
-    
-    var body: some View {
-        Image(systemName: checked ? "square.fill" : "square.fill")
-            .resizable()
-            .foregroundColor(checked ? Color(UIColor.systemBlue) : Color.white)
-            .onTapGesture {
-                self.checked.toggle()
-            }
-            .frame(width: 40, height: 40)
-    }
-}
-
 
 struct BottomSheetView_Previews: PreviewProvider {
     static var previews: some View {

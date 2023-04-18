@@ -24,57 +24,59 @@ struct ExploreView: View {
     @State var filterRecipes: [SavedRecipe] = []
     
     var body: some View {
-          VStack {
-              Text("Welcome Home")
-                  .font(.system(.largeTitle, design: .default, weight: .bold))
-                  .frame(maxWidth: .infinity, alignment: .leading)
-              Button {
-                  showingfilterBar = true
-              } label: {
-                  Label("Filter", systemImage: "line.3.horizontal")
-                      .padding([.leading, .trailing], 20)
-                      .padding([.top, .bottom], 10)
-                            // #0B6F6F
-                      .background(Color(red: 11/255, green: 111/255, blue: 111/255))
-                      .cornerRadius(15)
-              }
-              .buttonStyle(.plain)
-              .foregroundColor(.white)
-              
-              Divider()
-                  .padding(.horizontal)
-              
-              Picker("Source", selection: $selectedSource) {
-                  Text("Pantry").tag(Source.Pantry)
-                  Text("Filters").tag(Source.Filters)
-                  
-              }
-              .pickerStyle(.segmented).colorMultiply(.GPTorange())
-              .onAppear(){
-                  Task {
-                      do {
-                          try await pantryRecipes = SpoonacularReq.getRecipesGivenIngredients(ingredients: model.getUserIngredients(), count: 10)
-                      } catch {
-                          print(error)
-                      }
+        NavigationStack {
+            VStack {
+                Text("Welcome Home")
+                    .font(.system(.largeTitle, design: .default, weight: .bold))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Button {
+                    showingfilterBar = true
+                } label: {
+                    Label("Filter", systemImage: "line.3.horizontal")
+                        .padding([.leading, .trailing], 20)
+                        .padding([.top, .bottom], 10)
+                              // #0B6F6F
+                        .background(Color(red: 11/255, green: 111/255, blue: 111/255))
+                        .cornerRadius(15)
+                }
+                .buttonStyle(.plain)
+                .foregroundColor(.white)
+                
+                Divider()
+                    .padding(.horizontal)
+                
+                Picker("Source", selection: $selectedSource) {
+                    Text("Pantry").tag(Source.Pantry)
+                    Text("Filters").tag(Source.Filters)
+                    
+                }
+                .pickerStyle(.segmented).colorMultiply(.GPTorange())
+                .onAppear(){
+                    Task {
+                        do {
+                            try await pantryRecipes = SpoonacularReq.getRecipesGivenIngredients(ingredients: model.getUserIngredients(), count: 10)
+                        } catch {
+                            print(error)
+                        }
 
-                  }
-              }
+                    }
+                }
 
-              ScrollView(showsIndicators: false) {
-                  VStack {
-                      ForEach(selectedSource == .Pantry ? pantryRecipes : filterRecipes, id:\.id) { recipe in
-                          NavigationLink {
-                              DetailView()
-                          } label: {
-                              RecipeCardView()
-                                  .environmentObject(recipe)
-                          }
-                          .accentColor(.black)
-                      }
-                  }
-              }
-          }
+                ScrollView(showsIndicators: false) {
+                    VStack {
+                        ForEach(selectedSource == .Pantry ? pantryRecipes : filterRecipes, id:\.id) { recipe in
+                            NavigationLink {
+                                DetailView(recipe: recipe)
+                            } label: {
+                                RecipeCardView()
+                                    .environmentObject(recipe)
+                            }
+                            .accentColor(.black)
+                        }
+                    }
+                }
+            }
+        }
           .padding()
           .sheet(isPresented: $showingfilterBar) {
               ExploreFilterView(show: $showingfilterBar, selectedCuisine: $cuisine, selectedDietary: $dietary, selectedTime: $time)
@@ -112,8 +114,9 @@ struct ExploreView: View {
       
   }
 
-//struct ExploreView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ExploreView(cuisine: <#Binding<cuisine>#>, time: <#Binding<time>#>, dietary: <#Binding<dietary>#>)
-//    }
-//}
+struct ExploreView_Previews: PreviewProvider {
+    static var previews: some View {
+        ExploreView(cuisine: .American, time: .Five, dietary: .DairyFree)
+            .environmentObject(Model())
+    }
+}

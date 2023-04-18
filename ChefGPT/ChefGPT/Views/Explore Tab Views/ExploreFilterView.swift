@@ -33,7 +33,6 @@ struct ExploreFilterView: View {
     @Binding var selectedTime: time
 
     var body: some View {
-        
         VStack {
             Text("Cuisine Type: ")
             Picker("Cuisine", selection: $selectedCuisine) {
@@ -64,10 +63,3 @@ struct ExploreFilterView: View {
         }
     }
 }
-
-
-//struct ExploreFilterView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ExploreFilterView()
-//    }
-//}

@@ -35,7 +35,7 @@ struct HomeView: View {
                     VStack {
                         ForEach(model.usersRecipes.filter({ recipe in favoritesChosen ? recipe.isFavorited : true }), id:\.id) { recipe in
                             NavigationLink {
-                                DetailView()
+                                DetailView(recipe: recipe)
                             } label: {
                                 RecipeCardView()
                                     .environmentObject(recipe)

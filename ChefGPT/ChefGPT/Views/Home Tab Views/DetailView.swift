@@ -8,13 +8,8 @@
 import SwiftUI
 
 struct DetailView: View {
-    @State var recipe: SavedRecipe = SavedRecipe(id: 321, name: "Fried Chicken", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", isFavorited: true, vegetarian: true, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 30, cookingMinutes: 60, ingredients: [Encodable_Extended_Ingredients(name: "Egg", amount: 2, unit: "count"), Encodable_Extended_Ingredients(name: "Bread", amount: 2, unit: "loaves"), Encodable_Extended_Ingredients(name: "Chicken", amount: 2, unit: "loaves")], instructions: [
-        Encodable_Instructions(name: "Make sandwich", steps: [
-        Encodable_Steps(number: 1, step: "get bread"),
-        Encodable_Steps(number: 2, step: "get peanut butter"),
-        Encodable_Steps(number: 3, step: "bruh")
-        ])
-    ])
+    @State var recipe: SavedRecipe
+    
     @Environment(\.dismiss) var dismiss
     var body: some View {
         ZStack {
@@ -53,7 +48,7 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(recipe: SavedRecipe.sampleIndividualData)
     }
 }
 
@@ -109,12 +104,7 @@ extension DetailView {
                         Text("\(step.number). \(step.step)")
                     }
                     .font(.body)
-
             }
-                
-            
-            
         }
     }
-    
 }
