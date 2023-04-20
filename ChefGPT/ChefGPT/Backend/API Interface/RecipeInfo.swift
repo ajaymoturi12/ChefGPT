@@ -56,6 +56,12 @@ struct ExtendedIngredients: Codable {
     static let exampleData = [
     ExtendedIngredients(name: "Apple", amount: 2, unit: "each"),
     ExtendedIngredients(name: "Flour", amount: 2, unit: "cups"),
-    ExtendedIngredients(name: "Peanut Butter", amount: 2, unit: "cups")
+    ExtendedIngredients(name: "Peanut Butter", amount: 2, unit: "cups"),
+    ExtendedIngredients(name:"Penne", amount: 2, unit: "lbs"),
+    ExtendedIngredients(name:"Rice", amount: 2, unit: "lbs"),
+    ExtendedIngredients(name:"Butter", amount: 2, unit: "tbsp"),
+    ExtendedIngredients(name:"Rice", amount: 2, unit: "lbs"),
+    ExtendedIngredients(name:"Tortilla", amount: 4, unit: "each"),
+    ExtendedIngredients(name:"Black Beans", amount: 2, unit: "cans")
     ]
 }

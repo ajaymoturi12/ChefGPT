@@ -84,7 +84,7 @@ class SavedRecipe: ObservableObject {
         instructions: [Encodable_Instructions(name: "instruction1", steps: [Encodable_Steps(number: 1, step: "step1")])])
 
     static let sampleData = [
-        SavedRecipe(id: 716429, name: "Peanut Butter Jelly", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", isFavorited: false, vegetarian: true, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 5, cookingMinutes: 5, ingredients: [
+        SavedRecipe(id: 634873, name: "Best Baked Macaroni and Cheese", foodImage: "https://spoonacular.com/recipeImages/634873-312x231.jpg", isFavorited: false, vegetarian: true, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 5, cookingMinutes: 5, ingredients: [
             Encodable_Extended_Ingredients(name: "Peanut Butter", amount: 2, unit: "oz"),
             Encodable_Extended_Ingredients(name: "Jelly", amount: 2, unit: "oz"),
             Encodable_Extended_Ingredients(name: "Bread", amount: 2, unit: "slices")
@@ -96,10 +96,12 @@ class SavedRecipe: ObservableObject {
             Encodable_Extended_Ingredients(name: "Bread", amount: 2, unit: "slices")
             ],
             instructions: [Encodable_Instructions(name: "instruction1", steps: [Encodable_Steps(number: 1, step: "step1")])]),
-        SavedRecipe(id: 420420, name: "Peanut Butter Jelly", foodImage: "https://spoonacular.com/recipeImages/673463-312x231.jpg", isFavorited: false, vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 5, cookingMinutes: 5, ingredients: [
-            Encodable_Extended_Ingredients(name: "Peanut Butter", amount: 2, unit: "oz"),
-            Encodable_Extended_Ingredients(name: "Jelly", amount: 2, unit: "oz"),
-            Encodable_Extended_Ingredients(name: "Bread", amount: 2, unit: "slices")
+        SavedRecipe(id: 663745, name: "Totally Fresh Tomato Lasagna", foodImage: "https://spoonacular.com/recipeImages/663745-312x231.jpg", isFavorited: false, vegetarian: false, vegan: false, glutenFree: false, dairyFree: false, preparationMinutes: 5, cookingMinutes: 5, ingredients: [
+            Encodable_Extended_Ingredients(name: "Egg", amount: 2, unit: "oz"),
+            Encodable_Extended_Ingredients(name: "Mozarella", amount: 2, unit: "oz"),
+            Encodable_Extended_Ingredients(name: "Bread", amount: 2, unit: "slices"),
+            Encodable_Extended_Ingredients(name: "Tomatoes", amount: 2, unit: "each"),
+            Encodable_Extended_Ingredients(name: "Lasagna Noodles", amount: 2, unit: "lbs")
             ],
             instructions: [Encodable_Instructions(name: "instruction1", steps: [Encodable_Steps(number: 1, step: "step1")])])
     ]

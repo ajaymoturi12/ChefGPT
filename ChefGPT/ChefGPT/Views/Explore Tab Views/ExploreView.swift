@@ -13,6 +13,7 @@ enum Source: String {
 
 struct ExploreView: View {
     @EnvironmentObject var model: Model
+    @Environment(\.managedObjectContext) var moc
     
     @State var showingfilterBar = false
     @State var cuisine: cuisine = .Chinese
@@ -66,7 +67,8 @@ struct ExploreView: View {
                     VStack {
                         ForEach(selectedSource == .Pantry ? pantryRecipes : filterRecipes, id:\.id) { recipe in
                             NavigationLink {
-                                DetailView(recipe: recipe)
+                                ExploreDetailView(recipe: recipe)
+//                                    .environment(\.managedObjectContext, moc)
                             } label: {
                                 RecipeCardView()
                                     .environmentObject(recipe)

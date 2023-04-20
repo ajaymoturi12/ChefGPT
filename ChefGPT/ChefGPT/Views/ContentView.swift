@@ -12,6 +12,7 @@ struct ContentView: View {
     @FetchRequest(sortDescriptors: []) var recipes: FetchedResults<User_Recipe>
     var body: some View {
         MainView()
+            .environment(\.managedObjectContext, moc)
 //        VStack {
 //            List(recipes) { recipe in
 //                Text(recipe.name ?? "Unknown")

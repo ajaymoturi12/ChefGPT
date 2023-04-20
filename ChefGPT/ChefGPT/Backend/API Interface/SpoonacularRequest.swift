@@ -10,7 +10,12 @@ import SwiftUI
 
 let apiKey2 = "3f9f762b05e64407bede87d57f4899ef"
 let apiKey1 =  "094cd7839ef8471ca3dcd4b1c471e247"
-let apiKey = "a823bf180fbc432c805d85356437d116"
+let apiKey3 = "a823bf180fbc432c805d85356437d116"
+let apiKey4 = "616b151742434afc9f5b79d6a717c718"
+let apiKey5 = "65a8875266814ed5a18b67da96ac9e0a"
+let apiKey6 = "b3a0680464384347a2c216fa131727de"
+let apiKey = "a58145cfb1e049179a6f2863fdaaf4af"
+
 class SpoonacularReq: ObservableObject {
     @Published var results: Results
     @Published var curRecipe: Recipe

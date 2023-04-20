@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    @Environment(\.managedObjectContext) var moc
     @EnvironmentObject var model:Model
     @State var favoritesChosen = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -48,6 +49,9 @@ struct HomeView: View {
             }
             .padding()
         }
+//        .onAppear {
+//            model.load_recipes(context: moc)
+//        }
     }
 }
 

@@ -9,15 +9,19 @@ import SwiftUI
 
 struct MainView: View {
     
+    @Environment(\.managedObjectContext) var moc
     @StateObject var model = Model()
     
     var body: some View {
+//        let _ = model.load_recipes(context: moc)
         TabView {
             HomeView()
+                .environment(\.managedObjectContext, moc)
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
             ExploreView()
+                .environment(\.managedObjectContext, moc)
                 .tabItem {
                     Label("Explore", systemImage: "shippingbox.fill")
                 }

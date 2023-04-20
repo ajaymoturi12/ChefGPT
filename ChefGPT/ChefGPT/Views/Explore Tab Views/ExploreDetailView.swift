@@ -11,6 +11,7 @@ struct ExploreDetailView: View {
     
     @State var recipe: SavedRecipe
     @EnvironmentObject var model:Model
+    @Environment(\.managedObjectContext) var moc
     var body: some View {
         ZStack {
             DetailView(recipe: recipe)
@@ -18,6 +19,7 @@ struct ExploreDetailView: View {
                 Spacer()
                 Button {
                     model.addRecipe(recipe: recipe)
+                    model.saveRecipe(recipe: recipe, context: moc)
                 } label: {
                     Label("Add to Recipes", systemImage: "fork.knife")
                         .padding([.leading, .trailing], 20)

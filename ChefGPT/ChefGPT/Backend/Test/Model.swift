@@ -7,10 +7,11 @@
 
 import Foundation
 import SwiftUI
+import CoreData
 
 class Model: ObservableObject {
     
-    @Published var usersRecipes = SavedRecipe.sampleData // currently just fake data
+    @Published var usersRecipes : [SavedRecipe] = fakeRecipes
     @Published var usersPantry = ExtendedIngredients.exampleData
     
     
@@ -42,7 +43,17 @@ class Model: ObservableObject {
         usersRecipes.append(recipe)
     }
     
-    func saveRecipes() { // TODO: Method that just saves recipes to CoreData
-        
+    func saveRecipe(recipe: SavedRecipe, context: NSManagedObjectContext) {
+        let _ = recipe.to_User_Recipe(context: context)
+        try? context.save()
+    }
+    
+    @FetchRequest(sortDescriptors: []) var recipes: FetchedResults<User_Recipe>
+    func load_recipes(context: NSManagedObjectContext) {
+        var recipes: [SavedRecipe] = []
+        for recipe in recipes {
+            recipes.append(recipe)
+        }
+        usersRecipes = recipes
     }
 }
